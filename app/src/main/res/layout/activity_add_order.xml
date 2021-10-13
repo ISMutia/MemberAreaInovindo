@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddOrderActivity"
+    android:background="@drawable/b4">
+
+    <TextView
+        android:id="@+id/txtAddOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Add Order"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#304062"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_below="@id/txtAddOrder"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtProjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Project Name"
+            android:textSize="20sp"
+            android:textColor="#6D6C6C"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="30dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint=""
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtProjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Package"
+            android:textSize="20sp"
+            android:textColor="#6D6C6C"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="30dp"/>
+
+        <Spinner
+            android:id="@+id/spinJenisPaket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/jenisPaket"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:background="@drawable/outline"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <TextView
+            android:id="@+id/txtDomainName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Project Name"
+            android:textSize="20sp"
+            android:textColor="#6D6C6C"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="30dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint=""
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDomainName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More Info"
+            android:textSize="15sp"
+            android:textColor="#6D6C6C"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Submit"
+            android:textSize="18sp"
+            android:backgroundTint="#20A8E3"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="123dp"
+            android:layout_marginRight="123dp"
+            android:paddingTop="17dp"
+            android:paddingBottom="17dp"
+            app:cornerRadius="15dp"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

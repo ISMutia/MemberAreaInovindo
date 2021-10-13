@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MemberAreaInovindo</string>
+    <string name="sign_up">Dont have an account ? <b>Sign Up</b></string>
+    <string name="sign_in">Already have an account ? <b>Sign In</b></string>
+
+    <string-array name="jenisPaket">
+        <item>Silver</item>
+        <item>Gold</item>
+        <item>Platinum</item>
+    </string-array>
+</resources>
