@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MemberAreaInovindo">
         <activity android:name=".ProgressActivity"></activity>
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".AddTestimoniActivity" />
         <activity android:name=".AddOrderActivity" />
         <activity android:name=".ForgotPassword" />
