@@ -29,9 +29,20 @@
         app:cardBackgroundColor="#EAEEF7"
         app:cardCornerRadius="15dp">
 
+        <TextView
+            android:id="@+id/txtNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Hai Anastasia,"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
+
+
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
 <!--            android:id="@+id/rvBill"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
