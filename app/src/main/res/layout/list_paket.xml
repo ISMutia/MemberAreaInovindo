@@ -78,25 +78,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgPlatin"
         android:orientation="vertical"
-        android:padding="35dp"
-        android:layout_toRightOf="@id/imgPlatin">
+        android:padding="35dp">
 
         <TextView
             android:id="@+id/txtNamaPaket3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingTop="210dp"
             android:text="Paket Platinum"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingTop="210dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtHargaPaket3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rp.20.000.000"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
 </RelativeLayout>

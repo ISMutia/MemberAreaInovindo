@@ -19,12 +19,12 @@
         android:textSize="30sp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@id/txtlistorder"
         android:id="@+id/rvlistorder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_below="@id/txtlistorder"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/list_order" />
 
