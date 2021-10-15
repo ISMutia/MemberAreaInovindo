@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InfoPaketActivity"
-    android:background="@drawable/b3">
+    android:background="@drawable/b6">
 
     <TextView
         android:id="@+id/txtInfoPaket"
@@ -21,7 +21,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="120dp"
         android:layout_below="@+id/txtInfoPaket"
         android:orientation="vertical">
 
