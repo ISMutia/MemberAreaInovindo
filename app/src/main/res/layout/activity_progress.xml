@@ -5,104 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProgressActivity"
-    android:background="@drawable/b4">
-
+    android:background="@drawable/b3">
     <TextView
-        android:id="@+id/progress"
+        android:id="@+id/txtprogress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Add Testimoni"
+        android:text="Progress"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="30dp"
         android:textColor="#304062"
         android:textSize="30sp"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBills"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/txtprogress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#EAEEF7"
+            app:cardCornerRadius="15dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:layout_below="@+id/progress"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/txtProjectName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:textSize="20sp"
-            android:textColor="#6D6C6C"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="30dp"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:hint=""
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusBottomEnd="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtProjectName"
+            <TextView
+                android:id="@+id/txtnamaprogress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_weight="1"
+                android:text="Project Smarttiny"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#304062"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/txtTestimoni"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Testimoni"
-            android:textSize="20sp"
-            android:textColor="#6D6C6C"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="30dp"/>
+            <ImageView
+                android:id="@+id/imgSilver"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="300dp"
+                android:src="@drawable/progres1" />
+            <ProgressBar
+                android:id="@+id/simpleProgressBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="80"
+                android:layout_marginTop="70dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:padding="20dp"/><!--// 20dp padding from all the sides of the progress bar-->
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint=""
-            android:textAlignment="center"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusBottomEnd="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtTestimoni"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:maxLines="5"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSubmitTestimoni"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:text="Submit"
-            android:textSize="18sp"
-            android:backgroundTint="#20A8E3"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="123dp"
-            android:layout_marginRight="123dp"
-            android:paddingTop="17dp"
-            android:paddingBottom="17dp"
-            app:cornerRadius="15dp"/>
-
-    </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
