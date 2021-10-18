@@ -29,8 +29,8 @@
             android:id="@+id/rvlistPaket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/list_paket" />
     </LinearLayout>
