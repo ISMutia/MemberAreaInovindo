@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MemberAreaInovindo">
-        <activity android:name=".InfoPaketActivity"></activity>
+        <activity android:name=".RiwayatOrder"></activity>
+        <activity android:name=".InfoPaketActivity" />
         <activity android:name=".BillActivity" />
         <activity android:name=".TestimoniActivity" />
         <activity android:name=".ProgressActivity" />
