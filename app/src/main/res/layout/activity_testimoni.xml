@@ -8,7 +8,7 @@
     android:background="@drawable/b4">
 
     <TextView
-        android:id="@+id/txtOrder"
+        android:id="@+id/txtTestimo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -17,16 +17,15 @@
         android:layout_marginLeft="30dp"
         android:textColor="#304062"
         android:textSize="30sp"/>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+        android:layout_margin="25dp"
+        android:layout_below="@id/txtTestimo"
+        app:cardBackgroundColor="#EAEEF7"
+        app:cardCornerRadius="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
