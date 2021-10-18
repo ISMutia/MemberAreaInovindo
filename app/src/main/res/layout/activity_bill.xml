@@ -38,7 +38,7 @@
                 android:id="@+id/txtNama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="35dp"
                 android:layout_marginLeft="15dp"
                 android:text="Hai Anastasia,"
                 android:textSize="20sp"
@@ -52,6 +52,96 @@
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txtPType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Package Type"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txtPname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Project Name"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txtDomain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Domain"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txtDdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Date"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txtSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtotal"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/txtP1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paket Gold"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginLeft="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp">
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPayment"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/linear1"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="70dp"
+                android:text="Payment Method"
+                android:textColor="@color/black"
+                app:backgroundTint="#A1B0CF"
+                app:cornerRadius="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCheckOut"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/linear2"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="70dp"
+                android:text="Check Out"
+                android:textColor="@color/white"
+                app:backgroundTint="#E21313"
+                app:cornerRadius="50dp" />
+
 
         </LinearLayout>
 
