@@ -18,6 +18,17 @@
         android:textColor="#304062"
         android:textSize="30sp"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="330dp"
+        app:backgroundTint="@color/white"
+        android:src="@drawable/dropdown"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvlistorder"
         android:layout_width="match_parent"
@@ -27,6 +38,19 @@
         android:layout_marginTop="25dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/list_order" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabTambahPelanggan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:fabSize="normal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        app:backgroundTint="@color/white"
+        android:src="@drawable/ic_baseline_add_24"
+        />
 
 
 </RelativeLayout>
