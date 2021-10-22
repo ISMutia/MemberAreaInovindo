@@ -2,6 +2,7 @@
     <string name="app_name">MemberAreaInovindo</string>
     <string name="sign_up">Dont have an account ? <b>Sign Up</b></string>
     <string name="sign_in">Already have an account ? <b>Sign In</b></string>
+    <string name="jenisList">("List Order","Riwayat Order")</string>
 
     <string-array name="jenisPaket">
         <item>Silver</item>

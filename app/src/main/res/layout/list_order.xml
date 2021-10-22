@@ -1,209 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvList_order"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/cardview"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvList_riwayat"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="#EAEEF7"
-            app:cardCornerRadius="15dp">
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtOrder"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="23dp"
+                android:text="Order"
+                android:textSize="18sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp">
+            <TextView
+                android:id="@+id/txtIdOrder"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="23dp"
+                android:text="#dnskj12"
+                android:textColor="#00BCF1"
+                android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/txtOrder"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginTop="23dp"
-                        android:text="Order"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/txtIdOrder"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="65dp"
-                        android:layout_marginTop="23dp"
-                        android:text="#dnskj12"
-                        android:textColor="#00BCF1"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/txtStatus"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="75dp"
-                        android:layout_marginTop="23dp"
-                        android:text="Aktif"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:background="#3AB057"
-                        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="23dp"
+                android:background="#3AB057"
+                android:text="Aktif"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
 
-                </LinearLayout>
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
 
-                    <TextView
-                        android:id="@+id/txtP_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Project Name   "
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:layout_marginLeft="25dp"/>
+            <TextView
+                android:id="@+id/txtP_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Project Name   "
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/txtP_name1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="MemberArea Inovindo"
-                        android:textSize="18sp"
-                        android:paddingLeft="30dp"/>
+            <TextView
+                android:id="@+id/txtP_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="MemberArea Inovindo"
+                android:textSize="18sp" />
 
-                </LinearLayout>
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
 
-                    <TextView
-                        android:id="@+id/txtLama"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Work duration"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:layout_marginLeft="25dp"/>
+            <TextView
+                android:id="@+id/txtLama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Work duration"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/txtLama1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3 Bulan"
-                        android:textSize="18sp"
-                        android:paddingLeft="100dp"
-                        android:paddingBottom="15dp"
-                        android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtLama1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="100dp"
+                android:paddingBottom="15dp"
+                android:text="3 Bulan"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                </LinearLayout>
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
 
-                    <TextView
-                        android:id="@+id/txtPType1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Package Type"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:layout_marginLeft="25dp"/>
+            <TextView
+                android:id="@+id/txtPType1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Package Type"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/txtPType2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Gold"
-                        android:textSize="18sp"
-                        android:paddingLeft="100dp"
-                        android:paddingBottom="15dp"
-                        android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtPType2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="100dp"
+                android:paddingBottom="15dp"
+                android:text="Gold"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                </LinearLayout>
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
 
-                    <TextView
-                        android:id="@+id/txtSWork"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Start Work"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:layout_marginLeft="25dp"/>
+            <TextView
+                android:id="@+id/txtSWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Start Work"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/txtSWork1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="01 Oktober 2021"
-                        android:textSize="18sp"
-                        android:paddingLeft="130dp"
-                        android:paddingBottom="15dp"
-                        android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtSWork1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="130dp"
+                android:paddingBottom="15dp"
+                android:text="01 Oktober 2021"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                </LinearLayout>
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
 
-                    <TextView
-                        android:id="@+id/txtFWork"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Finished Work"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:layout_marginLeft="25dp"/>
+            <TextView
+                android:id="@+id/txtFWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Finished Work"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/txtFWork1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="31 Desember 2021"
-                        android:textSize="18sp"
-                        android:paddingLeft="100dp"
-                        android:paddingBottom="15dp"
-                        android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtFWork1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="100dp"
+                android:paddingBottom="15dp"
+                android:text="31 Desember 2021"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
 
     </LinearLayout>
 
-</RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
+
+
+

@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RiwayatOrder"
-    android:background="@drawable/b3">
+    android:background="@drawable/b4">
 
-    <TextView
-        android:id="@+id/txtlistRiwayat"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Riwayat Order"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="30dp"
-        android:textColor="#304062"
-        android:textSize="30sp"/>
+        android:layout_height="wrap_content">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvlistRiwayat"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar"
+            app:menu="@menu/toolbar_menu"
+            app:title="Riwayat Order"
+            app:titleTextAppearance="@style/Toolbar.TextStyle"
+            app:titleTextColor="@color/toolbar_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtlistRiwayat"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/list_riwayat" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvlistRiwayat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_riwayat"/>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

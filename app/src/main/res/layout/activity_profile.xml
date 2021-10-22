@@ -4,30 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity"
-    android:background="@drawable/b3">
+    android:background="@drawable/b3"
+    tools:context=".ProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txtDone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginLeft="340dp"
-        android:text="Done"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txtDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="340dp"
+            android:layout_marginTop="7dp"
+            android:text="Done"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/txtProfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile"
             android:layout_gravity="center"
+            android:text="Profile"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
@@ -35,14 +35,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/ic_account"/>
+            android:background="@drawable/ic_account" />
 
         <TextView
             android:id="@+id/txtProfilePhoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change Profile Photo"
             android:layout_gravity="center"
+            android:text="Change Profile Photo"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
@@ -50,100 +50,107 @@
             android:id="@+id/txtInformasiAkun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
             android:text="account information :"
-            android:textSize="20sp"
             android:textColor="#6D6C6C"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="30dp"/>
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/txtFullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fullname"
-            android:textSize="20sp"
-            android:textColor="#6D6C6C"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="30dp"/>
+            android:text="Fullname"
+            android:textColor="#6D6C6C"
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
             android:layout_marginLeft="25dp"
+            android:layout_marginTop="2dp"
             android:layout_marginRight="25dp"
             android:hint=""
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusBottomEnd="10dp">
+            app:endIconDrawable="@drawable/ic_baseline_edit_24"
+            app:endIconMode="custom">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtFullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"/>
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
             android:id="@+id/txtDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date Birth"
-            android:textSize="20sp"
-            android:textColor="#6D6C6C"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="8dp"
-            android:layout_marginLeft="30dp"/>
+            android:text="Date Birth"
+            android:textColor="#6D6C6C"
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
             android:layout_marginLeft="25dp"
+            android:layout_marginTop="2dp"
             android:layout_marginRight="25dp"
             android:hint=""
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusBottomEnd="10dp">
+            app:endIconDrawable="@drawable/ic_baseline_calendar_today_24"
+            app:endIconMode="custom">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"/>
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="20sp"
-            android:textColor="#6D6C6C"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="8dp"
-            android:layout_marginLeft="30dp"/>
+            android:text="Email"
+            android:textColor="#6D6C6C"
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
             android:layout_marginLeft="25dp"
+            android:layout_marginTop="2dp"
             android:layout_marginRight="25dp"
             android:hint=""
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusBottomEnd="10dp">
+            app:endIconDrawable="@drawable/ic_baseline_edit_24"
+            app:endIconMode="custom">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"/>
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -151,15 +158,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_marginLeft="123dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="123dp"
+            android:backgroundTint="#20A8E3"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="Sign Out"
             android:textSize="18sp"
-            android:backgroundTint="#20A8E3"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="123dp"
-            android:layout_marginRight="123dp"
-            android:paddingTop="17dp"
-            android:paddingBottom="17dp"
-            app:cornerRadius="15dp"/>
+            app:cornerRadius="15dp" />
 
     </LinearLayout>
 

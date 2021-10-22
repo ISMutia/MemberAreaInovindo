@@ -1,56 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListOrderActivity"
-    android:background="@drawable/b4">
+    android:background="@drawable/b4"
+    tools:context=".ListOrderActivity">
 
-    <TextView
-        android:id="@+id/txtlistorder"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="List Order"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="30dp"
-        android:textColor="#304062"
-        android:textSize="30sp"/>
+        android:layout_height="wrap_content">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:fabSize="mini"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="330dp"
-        app:backgroundTint="@color/white"
-        android:src="@drawable/dropdown"
-        />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar"
+            app:menu="@menu/toolbar_menu"
+            app:title="List Order"
+            app:titleTextAppearance="@style/Toolbar.TextStyle"
+            app:titleTextColor="@color/toolbar_title" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvlistorder"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtlistorder"
-        android:layout_centerHorizontal="true"
+        android:layout_height="match_parent"
         android:layout_marginTop="25dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/list_order" />
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvlistorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_order" />
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabTambah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        app:fabSize="normal"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginRight="30dp"
-        app:backgroundTint="@color/white"
         android:src="@drawable/ic_baseline_add_24"
-        />
+        app:backgroundTint="@color/white"
+        app:fabSize="normal" />
 
-
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
