@@ -48,7 +48,7 @@
                 android:id="@+id/txtNoBill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No. Bills"
+                android:text="No. Bills :"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:layout_marginLeft="15dp"/>
@@ -57,7 +57,7 @@
                 android:id="@+id/txtPType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Package Type"
+                android:text="Package Type :"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:layout_marginLeft="15dp"/>
@@ -66,7 +66,7 @@
                 android:id="@+id/txtPname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Project Name"
+                android:text="Project Name :"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:layout_marginLeft="15dp"/>
@@ -75,7 +75,7 @@
                 android:id="@+id/txtDomain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Domain"
+                android:text="Domain :"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:layout_marginLeft="15dp"/>
@@ -84,7 +84,7 @@
                 android:id="@+id/txtDdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Due Date"
+                android:text="Due Date :"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:layout_marginLeft="15dp"/>
