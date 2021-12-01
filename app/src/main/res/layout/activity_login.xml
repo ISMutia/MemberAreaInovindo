@@ -31,13 +31,15 @@
             android:id="@+id/m_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/def_margin_half"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@drawable/background_filled_yellow_radius"
             android:drawablePadding="@dimen/def_margin_half"
             android:hint="Email"
             android:singleLine="true" />
+
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="280dp"
@@ -53,8 +55,8 @@
         <AutoCompleteTextView
             android:id="@+id/m_password"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/def_margin_half"
+            android:layout_height="25dp"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@drawable/background_filled_yellow_radius"
             android:drawablePadding="@dimen/def_margin_half"
