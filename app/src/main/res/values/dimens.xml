@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="def_margin">25dp</dimen>
-    <dimen name="def_margin_half">8dp</dimen>
+    <dimen name="def_margin_half">20dp</dimen>
     <dimen name="radius">50dp</dimen>
     <dimen name="def_margin2">10dp</dimen>
 </resources>
