@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/b3"
-    tools:context=".ProfileActivity">
+    tools:context=".EditProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,21 +13,12 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtDone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="340dp"
-            android:layout_marginTop="7dp"
-            android:text="Done"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
-
-        <TextView
             android:id="@+id/txtProfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Profile"
+            android:layout_marginTop="50dp"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
@@ -164,7 +155,7 @@
             android:backgroundTint="#20A8E3"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Sign Out"
+            android:text="Done"
             android:textSize="18sp"
             app:cornerRadius="15dp" />
 

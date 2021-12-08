@@ -11,6 +11,7 @@ public class InfoPaketActivity extends AppCompatActivity {
 
     LinearLayout silver, gold, platinum;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
