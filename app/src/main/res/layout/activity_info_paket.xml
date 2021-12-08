@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InfoPaketActivity"
-    android:background="@drawable/b6">
+    android:background="@drawable/b6"
+    >
 
     <TextView
         android:id="@+id/txtInfoPaket"
@@ -18,21 +19,111 @@
         android:textColor="#304062"
         android:textSize="30sp"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="125dp"
-        android:layout_below="@+id/txtInfoPaket"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtInfoPaket"
+        android:layout_marginTop="150dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvlistPaket"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/imgSilver"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:src="@drawable/silver"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            android:orientation="vertical"
+            android:padding="35dp"
+            android:layout_toRightOf="@id/imgSilver"
+            android:id="@+id/linearSilver">
+
+            <TextView
+                android:id="@+id/txtNamaPaket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paket Silver"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtHargaPaket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp.3.500.000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgGold"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:src="@drawable/gold"
+            android:layout_below="@id/imgSilver"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/linearGold"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/list_paket" />
-    </LinearLayout>
+            android:layout_below="@+id/linearSilver"
+            android:layout_marginTop="-117dp"
+            android:layout_toRightOf="@id/imgGold"
+            android:orientation="vertical"
+            android:padding="35dp">
+
+            <TextView
+                android:id="@+id/txtNamaPaket2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="110dp"
+                android:text="Paket Gold"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtHargaPaket2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp.5.000.000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgPlatin"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:src="@drawable/platin"
+            android:layout_below="@id/imgGold"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imgPlatin"
+            android:orientation="vertical"
+            android:padding="35dp"
+            android:id="@+id/linearPlatinum">
+
+            <TextView
+                android:id="@+id/txtNamaPaket3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="210dp"
+                android:text="Paket Platinum"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtHargaPaket3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp.20.000.000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

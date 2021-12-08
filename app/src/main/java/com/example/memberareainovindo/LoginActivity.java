@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
 
     void kirim_data()
     {
-        String url="http://192.168.43.68/api/checkLogin.php";
+        String url="http://192.168.1.23/api/checkLogin.php";
         StringRequest respon = new StringRequest(
                 Request.Method.POST,
                 url,
