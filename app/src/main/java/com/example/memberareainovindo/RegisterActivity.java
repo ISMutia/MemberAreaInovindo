@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.memberareainovindo.ui.login.LoginActivity;
+
 public class RegisterActivity extends AppCompatActivity {
 
     TextView textLogin;
@@ -19,7 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
         textLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent int3 = new Intent(RegisterActivity.this,LoginActivity.class);
+                Intent int3 = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(int3);
             }
         });

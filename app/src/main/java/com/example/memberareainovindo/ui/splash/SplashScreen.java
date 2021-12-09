@@ -1,9 +1,12 @@
-package com.example.memberareainovindo;
+package com.example.memberareainovindo.ui.splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.memberareainovindo.R;
+import com.example.memberareainovindo.ui.login.LoginActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -18,7 +21,7 @@ public class SplashScreen extends AppCompatActivity {
                 }catch (Exception ex){
                     ex.printStackTrace();
                 }finally {
-                    Intent intent = new Intent(SplashScreen.this,LoginActivity.class);
+                    Intent intent = new Intent(SplashScreen.this, LoginActivity.class);
                     startActivity(intent);
                 }
             }
