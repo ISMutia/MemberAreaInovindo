@@ -1,4 +1,4 @@
-package com.example.memberareainovindo.adapter;
+package com.example.memberareainovindo.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;

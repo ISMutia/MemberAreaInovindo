@@ -5,11 +5,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.memberareainovindo.adapter.ListOrderAdapter;
-import com.example.memberareainovindo.adapter.RiwayatBillAdapter;
+import com.example.memberareainovindo.Adapter.RiwayatBillAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class RiwayatBillActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
