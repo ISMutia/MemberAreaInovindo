@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".ui.register.RegisterActivity"
     android:background="@drawable/b2">
 
     <TextView
@@ -107,6 +107,7 @@
             android:background="@drawable/background_filled_yellow_radius"
             android:drawablePadding="@dimen/def_margin_half"
             android:hint="Password"
+            android:inputType="textPassword"
             android:singleLine="true"
             />
     </LinearLayout>
@@ -117,7 +118,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/def_margin2"
-        android:text="Login"
+        android:text="submit"
         android:textColor="@color/white"
         app:backgroundTint="#20A8E3"
         app:cornerRadius="50dp"

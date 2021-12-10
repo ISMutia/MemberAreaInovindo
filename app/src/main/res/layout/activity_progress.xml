@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProgressActivity"
+    tools:context=".ui.progress.ProgressActivity"
     android:background="@drawable/b3">
     <TextView
         android:id="@+id/txtprogress"

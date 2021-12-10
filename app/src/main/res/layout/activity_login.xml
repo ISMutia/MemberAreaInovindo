@@ -60,6 +60,7 @@
             android:background="@drawable/background_filled_yellow_radius"
             android:drawablePadding="@dimen/def_margin_half"
             android:hint="Password"
+            android:inputType="textPassword"
             android:singleLine="true" />
     </LinearLayout>
 

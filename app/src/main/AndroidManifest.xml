@@ -15,14 +15,14 @@
         android:theme="@style/Theme.MemberAreaInovindo">
         <activity android:name=".InfoPaketActivity" ></activity>
         <activity android:name=".BillActivity" />
-        <activity android:name=".ProgressActivity" />
+        <activity android:name=".ui.progress.ProgressActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".AddOrderActivity" />
         <activity android:name=".ForgotPassword" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ui.register.RegisterActivity" />
+        <activity android:name=".ui.dashboard.MainActivity" />
         <activity android:name=".ui.login.LoginActivity" />
-        <activity android:name=".ListOrderActivity"/>
+        <activity android:name=".ui.order.ListOrderActivity"/>
         <activity android:name=".ui.splash.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
