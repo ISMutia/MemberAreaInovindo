@@ -59,4 +59,18 @@ public class Data{
 	public String getStatus(){
 		return status;
 	}
+
+	@Override
+	public String toString() {
+		return "Data{" +
+				"dateBirth='" + dateBirth + '\'' +
+				", updatedAt='" + updatedAt + '\'' +
+				", createdAt=" + createdAt +
+				", id=" + id +
+				", fullname='" + fullname + '\'' +
+				", gambar=" + gambar +
+				", email='" + email + '\'' +
+				", status='" + status + '\'' +
+				'}';
+	}
 }
