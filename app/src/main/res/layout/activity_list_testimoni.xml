@@ -6,15 +6,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.progress.ProgressActivity"
-    android:background="@drawable/b3"
-    >
+    tools:context=".ListTestimoniActivity"
+    android:background="@drawable/b3">
     <TextView
-        android:id="@+id/txtprogress"
+        android:id="@+id/txtTestimo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Progress"
+        android:text="Testimoni"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="30dp"
         android:textColor="#304062"
@@ -24,20 +23,21 @@
         android:layout_width="350dp"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:layout_below="@id/txtprogress"
+        android:layout_below="@id/txtTestimo"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_marginLeft="20dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvlistRiwayat"
+            android:id="@+id/rvlistTestimo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:nestedScrollingEnabled="false"
             android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/list_progress"/>
+            tools:listitem="@layout/list_testimoni"/>
     </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>
 </ScrollView>
+

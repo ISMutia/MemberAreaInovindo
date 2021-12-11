@@ -1,11 +1,13 @@
-package com.example.memberareainovindo;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.memberareainovindo.ui.paket;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.memberareainovindo.R;
 
 public class InfoPaketActivity extends AppCompatActivity {
 
@@ -29,7 +31,7 @@ public class InfoPaketActivity extends AppCompatActivity {
         silver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intSilver = new Intent(InfoPaketActivity.this,PaketSilver.class);
+                Intent intSilver = new Intent(InfoPaketActivity.this, PaketSilver.class);
                 startActivity(intSilver);
             }
         });
@@ -39,7 +41,7 @@ public class InfoPaketActivity extends AppCompatActivity {
         gold.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intGold = new Intent(InfoPaketActivity.this,PaketGold.class);
+                Intent intGold = new Intent(InfoPaketActivity.this, PaketGold.class);
                 startActivity(intGold);
             }
         });
@@ -49,7 +51,7 @@ public class InfoPaketActivity extends AppCompatActivity {
         platinum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intPlatinum = new Intent(InfoPaketActivity.this,PaketPlatinum.class);
+                Intent intPlatinum = new Intent(InfoPaketActivity.this, PaketPlatinum.class);
                 startActivity(intPlatinum);
             }
         });

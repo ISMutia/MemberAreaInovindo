@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.memberareainovindo.Api.RetroServer;
 import com.example.memberareainovindo.Model.body.RegisterBody;
 import com.example.memberareainovindo.Model.response.register.RegisterResponse;
-import com.example.memberareainovindo.R;
 import com.example.memberareainovindo.databinding.ActivityRegisterBinding;
 import com.example.memberareainovindo.ui.login.LoginActivity;
 import com.gzeinnumer.da.dialog.datePickerDialog.single.SingleDatePickerDialog;
@@ -26,7 +25,6 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 

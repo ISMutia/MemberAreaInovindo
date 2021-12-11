@@ -52,5 +52,10 @@ dependencies {
 
     implementation 'com.github.gzeinnumer:SimpleMaterialStyle:2.3.3'
 
+    implementation 'com.github.gzeinnumer:EasyOptionMenu:1.1.0'
+
+    implementation 'com.github.gzeinnumer:EasyDialogFragment:2.1.0'
+
+
 
 }

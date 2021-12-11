@@ -1,8 +1,10 @@
-package com.example.memberareainovindo;
+package com.example.memberareainovindo.ui.bill;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.example.memberareainovindo.R;
 
 public class BillActivity extends AppCompatActivity {
 

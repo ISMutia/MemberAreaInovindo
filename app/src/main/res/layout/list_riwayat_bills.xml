@@ -32,7 +32,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtIdOrder"
+                android:id="@+id/txtP_nameB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SmartQuran"
@@ -69,7 +69,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/txtP_name1"
+                android:id="@+id/txtIdBills"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"

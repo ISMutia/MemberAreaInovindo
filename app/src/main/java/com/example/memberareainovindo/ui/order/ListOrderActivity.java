@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.memberareainovindo.Adapter.ListOrderAdapter;
-import com.example.memberareainovindo.AddOrderActivity;
 import com.example.memberareainovindo.Api.RetroServer;
 import com.example.memberareainovindo.Model.response.order.DataItem;
 import com.example.memberareainovindo.Model.response.order.OrderResponse;
@@ -76,10 +75,14 @@ public class ListOrderActivity extends AppCompatActivity {
     }
 
     private void initRv(List<DataItem> data) {
-        ListOrderAdapter adapter = new ListOrderAdapter(data);
-        binding.rvlistorder.setAdapter(adapter);
-        binding.rvlistorder.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        binding.rvlistorder.hasFixedSize();
+        try {
+            ListOrderAdapter adapter = new ListOrderAdapter(data);
+            binding.rvlistorder.setAdapter(adapter);
+            binding.rvlistorder.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+            binding.rvlistorder.hasFixedSize();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 

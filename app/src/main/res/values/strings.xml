@@ -9,4 +9,8 @@
         <item>Gold</item>
         <item>Platinum</item>
     </string-array>
+    <string-array name="jenisDomain">
+        <item>.com</item>
+        <item>.co.id</item>
+    </string-array>
 </resources>

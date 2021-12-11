@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.memberareainovindo.ui.order.ListOrderActivity;
-import com.example.memberareainovindo.RiwayatBillActivity;
+import com.example.memberareainovindo.ui.riwayatbill.RiwayatBillActivity;
 import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityMainBinding;
 import com.example.memberareainovindo.ui.login.LoginActivity;

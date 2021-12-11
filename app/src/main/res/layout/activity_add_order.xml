@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddOrderActivity"
+    tools:context=".ui.order.AddOrderActivity"
     android:background="@drawable/b4">
 
     <TextView
@@ -79,42 +79,33 @@
             android:id="@+id/txtDomainName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Project Name"
+            android:text="Domain Name"
             android:textSize="20sp"
             android:textColor="#6D6C6C"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="30dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <Spinner
+            android:id="@+id/spinJenisDomain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:entries="@array/jenisDomain"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:background="@drawable/outline"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:hint=""
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusBottomEnd="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtDomainName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginRight="25dp"/>
 
         <TextView
             android:id="@+id/txtInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="More Info"
-            android:textSize="15sp"
-            android:textColor="#6D6C6C"
-            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="30dp"/>
+            android:text="More Info"
+            android:textColor="#6D6C6C"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSubmitOrder"

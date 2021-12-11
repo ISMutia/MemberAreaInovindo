@@ -2,9 +2,15 @@ package com.example.memberareainovindo.Api;
 
 import com.example.memberareainovindo.Model.body.LoginBody;
 import com.example.memberareainovindo.Model.body.RegisterBody;
+import com.example.memberareainovindo.Model.body.TestimoniAddBody;
+import com.example.memberareainovindo.Model.response.bills.BillResponse;
 import com.example.memberareainovindo.Model.response.login.LoginResponse;
 import com.example.memberareainovindo.Model.response.order.OrderResponse;
+import com.example.memberareainovindo.Model.response.orderAdd.FormResponse;
+import com.example.memberareainovindo.Model.response.progress.ProgressResponse;
 import com.example.memberareainovindo.Model.response.register.RegisterResponse;
+import com.example.memberareainovindo.Model.response.testimoni.TestimoniResponse;
+import com.example.memberareainovindo.Model.response.testimoniAdd.TestimoniAddResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -23,5 +29,26 @@ public interface ApiService {
 
     @GET("orderList")
     Call<OrderResponse> orderList();
+
+    @GET("orderList")
+    Call<OrderResponse> riwayatList();
+
+    @GET("testimoniList")
+    Call<TestimoniResponse> testimoniList();
+
+    @GET("billList")
+    Call<BillResponse> billList();
+
+    @GET("billList")
+    Call<BillResponse> riwayatBills();
+
+    @GET("progressList")
+    Call<ProgressResponse> progressList();
+
+    @GET("orderGetForm")
+    Call<FormResponse> orderGetForm();
+
+    @POST("testimoniAdd")
+    Call<TestimoniAddResponse> testiAdd(@Body TestimoniAddBody body);
 
 }
