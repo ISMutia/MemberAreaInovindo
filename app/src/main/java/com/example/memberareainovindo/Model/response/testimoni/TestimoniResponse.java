@@ -1,7 +1,8 @@
 package com.example.memberareainovindo.Model.response.testimoni;
 
-import java.util.List;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
 
 public class TestimoniResponse{
 
