@@ -19,4 +19,12 @@ public class TestimoniResponse{
 	public String getStatus(){
 		return status;
 	}
+
+	@Override
+	public String toString() {
+		return "TestimoniResponse{" +
+				"data=" + data +
+				", status='" + status + '\'' +
+				'}';
+	}
 }

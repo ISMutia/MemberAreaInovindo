@@ -53,10 +53,26 @@ public class AddOrderActivity extends AppCompatActivity {
             }
         });
 
-        binding.spinJenisPaket.setOnClickListener(new View.OnClickListener() {
+//        binding.spinJenisPaket.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openDialogPrice();
+//            }
+//        });
+
+        binding.spinJenisPaket.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void onClick(View v) {
-                openDialogPrice();
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    binding.spinJenisPaket.clearFocus();
+                    try {
+                        openDialogPrice();
+
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+
             }
         });
 

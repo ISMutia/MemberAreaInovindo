@@ -1,6 +1,8 @@
 package com.example.memberareainovindo.ui.testimoni;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,10 +31,21 @@ public class ListTestimoniActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         initView();
+        initOnClick();
     }
 
     private void initView() {
         loadDataTestimoni();
+    }
+
+    private void initOnClick() {
+        binding.fabTambahTesti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoaddtesti = new Intent(ListTestimoniActivity.this, AddTestimoniActivity.class);
+                startActivity(gotoaddtesti);
+            }
+        });
     }
 
     private void loadDataTestimoni() {
@@ -41,7 +54,7 @@ public class ListTestimoniActivity extends AppCompatActivity {
                 .enqueue(new Callback<TestimoniResponse>() {
                     @Override
                     public void onResponse(Call<TestimoniResponse> call, Response<TestimoniResponse> response) {
-                        Toast.makeText(ListTestimoniActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(ListTestimoniActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
                         if(response.body().getData()!=null){
                             intRvTesti(response.body().getData());
                         }

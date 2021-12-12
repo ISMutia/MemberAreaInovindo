@@ -13,11 +13,12 @@
         android:supportsRtl="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.MemberAreaInovindo">
-        <activity android:name=".InfoPaketActivity" ></activity>
-        <activity android:name=".BillActivity" />
+        <activity android:name=".ui.testimoni.ListTestimoniActivity" ></activity>
+        <activity android:name=".ui.bill.BillActivity" />
+        <activity android:name=".ui.testimoni.AddTestimoniActivity" />
         <activity android:name=".ui.progress.ProgressActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".AddOrderActivity" />
+        <activity android:name=".ui.order.AddOrderActivity" />
         <activity android:name=".ui.order.RiwayatOrderActivity" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".ui.register.RegisterActivity" />

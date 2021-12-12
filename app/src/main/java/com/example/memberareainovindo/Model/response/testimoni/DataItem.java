@@ -45,4 +45,16 @@ public class DataItem{
 	public String getFullname(){
 		return fullname;
 	}
+
+	@Override
+	public String toString() {
+		return "DataItem{" +
+				"idCustomers=" + idCustomers +
+				", updatedAt=" + updatedAt +
+				", description='" + description + '\'' +
+				", createdAt=" + createdAt +
+				", id=" + id +
+				", fullname='" + fullname + '\'' +
+				'}';
+	}
 }
