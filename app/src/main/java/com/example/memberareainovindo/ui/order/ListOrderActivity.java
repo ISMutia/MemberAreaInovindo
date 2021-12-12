@@ -53,6 +53,7 @@ public class ListOrderActivity extends AppCompatActivity {
                 startActivity(gotoaddorder);
             }
         });
+
     }
 
     private void loadDataOrder() {
@@ -84,6 +85,7 @@ public class ListOrderActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 
 
 }

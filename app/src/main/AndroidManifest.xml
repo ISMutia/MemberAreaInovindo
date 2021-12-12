@@ -20,6 +20,7 @@
         <activity android:name=".ui.progress.ProgressActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ui.order.AddOrderActivity" />
+        <activity android:name=".ui.order.RiwayatOrderActivity" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".ui.register.RegisterActivity" />
         <activity android:name=".ui.dashboard.MainActivity" />

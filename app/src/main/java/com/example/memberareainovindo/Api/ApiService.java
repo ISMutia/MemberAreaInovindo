@@ -9,6 +9,7 @@ import com.example.memberareainovindo.Model.response.order.OrderResponse;
 import com.example.memberareainovindo.Model.response.orderAdd.FormResponse;
 import com.example.memberareainovindo.Model.response.progress.ProgressResponse;
 import com.example.memberareainovindo.Model.response.register.RegisterResponse;
+import com.example.memberareainovindo.Model.response.riwayatOrder.OrderRiwayatResponse;
 import com.example.memberareainovindo.Model.response.testimoni.TestimoniResponse;
 import com.example.memberareainovindo.Model.response.testimoniAdd.TestimoniAddResponse;
 
@@ -30,8 +31,8 @@ public interface ApiService {
     @GET("orderList")
     Call<OrderResponse> orderList();
 
-    @GET("orderList")
-    Call<OrderResponse> riwayatList();
+    @GET("orderRiwayat")
+    Call<OrderRiwayatResponse> orderRiwayat();
 
     @GET("testimoniList")
     Call<TestimoniResponse> testimoniList();

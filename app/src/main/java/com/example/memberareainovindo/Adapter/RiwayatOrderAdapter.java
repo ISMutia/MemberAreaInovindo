@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.memberareainovindo.Model.response.riwayatorder.DataItem;
-import com.example.memberareainovindo.databinding.ListRiwayatBinding;
+import com.example.memberareainovindo.Model.response.riwayatOrder.DataItem;
+import com.example.memberareainovindo.databinding.ListRiwayatOrderBinding;
 
 import java.util.List;
 
@@ -21,14 +21,13 @@ public class RiwayatOrderAdapter extends RecyclerView.Adapter<RiwayatOrderAdapte
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(ListRiwayatBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
-
+        return new ViewHolder(ListRiwayatOrderBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.bindData(lisItem.get(position));
-
+        // jika ada item
     }
 
     @Override
@@ -37,17 +36,20 @@ public class RiwayatOrderAdapter extends RecyclerView.Adapter<RiwayatOrderAdapte
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        ListRiwayatBinding binding;
+        ListRiwayatOrderBinding binding;
 
-        public ViewHolder( @NonNull ListRiwayatBinding itemView) {
+        public ViewHolder(@NonNull  ListRiwayatOrderBinding itemView) {
             super(itemView.getRoot());
 
-            binding = itemView;
-
+            // deklarasi variable widget
         }
 
         public void bindData(DataItem dataItem) {
-
+            binding.txtPNameB.setText(dataItem.getProjectName());
+            binding.txtIdBills.setText(dataItem.getNoBill());
+            binding.txtStatus.setText(dataItem.getStatusName());
+            binding.txtTypePaket1.setText(dataItem.getPriceName());
+            //binding.txtDate.setText(dataItem.getCreatedAt()+"");
 
         }
     }
