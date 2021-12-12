@@ -2,7 +2,7 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvList_order"
-    android:layout_width="360dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:clickable="true"
@@ -21,16 +21,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/txtOrder"
-                android:layout_width="75dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="23dp"
                 android:text="Order ID :"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/txtIdOrder"
@@ -39,14 +40,15 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="23dp"
                 android:text="1"
+                android:textStyle="bold"
                 android:textColor="#00BCF1"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtStatus"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="75dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="23dp"
                 android:background="#3AB057"
                 android:text="Active"
@@ -60,8 +62,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:orientation="vertical"
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/txtP_name"
@@ -78,9 +80,9 @@
                 android:layout_height="wrap_content"
                 android:text="MemberArea Inovindo"
                 android:textSize="18sp"
-                android:paddingLeft="15dp"
+                android:paddingLeft="25dp"
                 android:paddingBottom="15dp"
-                android:textStyle="bold"/>
+                android:paddingTop="8dp"/>
 
         </LinearLayout>
 
@@ -88,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/txtLama"
@@ -107,7 +109,7 @@
                 android:paddingBottom="15dp"
                 android:text="3 Bulan"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                 />
 
         </LinearLayout>
 
@@ -115,7 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/txtPType1"
@@ -134,14 +136,14 @@
                 android:paddingBottom="15dp"
                 android:text="Gold"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                 />
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/txtTypeDomain"
@@ -160,7 +162,7 @@
                 android:paddingBottom="15dp"
                 android:text=".co"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                 />
 
         </LinearLayout>
 
@@ -168,7 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/txtSWork"
@@ -187,7 +189,7 @@
                 android:paddingBottom="15dp"
                 android:text="01 Oktober 2021"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                 />
 
         </LinearLayout>
 
@@ -195,7 +197,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/txtFWork"
@@ -214,7 +216,7 @@
                 android:paddingBottom="15dp"
                 android:text="31 Desember 2021"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                 />
 
         </LinearLayout>
 
@@ -222,7 +224,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/txtFDomain"
@@ -241,7 +243,7 @@
                 android:paddingBottom="15dp"
                 android:text="31 Desember 2022"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                 />
 
         </LinearLayout>
 

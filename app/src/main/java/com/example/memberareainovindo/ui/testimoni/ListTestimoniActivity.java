@@ -54,10 +54,15 @@ public class ListTestimoniActivity extends AppCompatActivity {
     }
 
     private void intRvTesti(List<DataItem> data) {
-        TestimoniAdapter adapter = new TestimoniAdapter(data);
-        binding.rvlistTestimo.setAdapter(adapter);
-        binding.rvlistTestimo.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        binding.rvlistTestimo.hasFixedSize();
+        try {
+            TestimoniAdapter adapter = new TestimoniAdapter(data);
+            binding.rvlistTestimo.setAdapter(adapter);
+            binding.rvlistTestimo.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+            binding.rvlistTestimo.hasFixedSize();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
 

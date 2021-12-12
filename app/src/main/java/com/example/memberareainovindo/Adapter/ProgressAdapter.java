@@ -54,7 +54,7 @@ public class ProgressAdapter extends RecyclerView.Adapter<ProgressAdapter.ViewHo
 
         public void bindData(DataItem dataItem) {
             binding.txtnamaprogress.setText(dataItem.getProjectName());
-            //binding.simpleProgressBar.setText(dataItem.getProgress());
+            binding.simpleProgressBar.setProgress(dataItem.getProgress());
 
 
         }

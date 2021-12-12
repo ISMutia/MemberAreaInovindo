@@ -44,6 +44,7 @@ public class TestimoniAdapter extends RecyclerView.Adapter<TestimoniAdapter.View
         }
 
         public void bindData(DataItem dataItem) {
+            binding.txtCusName.setText(dataItem.getFullname());
             binding.txtTestiCus.setText(dataItem.getDescription());
         }
     }

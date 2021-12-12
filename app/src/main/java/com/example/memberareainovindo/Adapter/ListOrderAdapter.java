@@ -54,8 +54,9 @@ public class ListOrderAdapter extends RecyclerView.Adapter<ListOrderAdapter.View
             binding.txtFDomain1.setText(dataItem.getLamaDomain());
             binding.txtSWork1.setText(dataItem.getMulaiP());
             binding.txtFWork1.setText(dataItem.getSelesaiP());
-            binding.txtPType2.setText(dataItem.getPrice_name());
-            binding.txtTypeDomain1.setText(dataItem.getDomain_name());
+            binding.txtPType2.setText(dataItem.getPriceName());
+            binding.txtTypeDomain1.setText(dataItem.getDomainName());
+            binding.txtStatus.setText(dataItem.getStatusName());
 
 
         }

@@ -6,12 +6,12 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.memberareainovindo.ui.order.ListOrderActivity;
-import com.example.memberareainovindo.ui.riwayatbill.RiwayatBillActivity;
 import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityMainBinding;
 import com.example.memberareainovindo.ui.login.LoginActivity;
+import com.example.memberareainovindo.ui.order.ListOrderActivity;
 import com.example.memberareainovindo.ui.progress.ProgressActivity;
+import com.example.memberareainovindo.ui.testimoni.ListTestimoniActivity;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        binding.cBills.setOnClickListener(new View.OnClickListener() {
+        binding.cTestimoni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotobills = new Intent(MainActivity.this, RiwayatBillActivity.class);
-                startActivity(gotobills);
+                Intent gotoTesti = new Intent(MainActivity.this, ListTestimoniActivity.class);
+                startActivity(gotoTesti);
             }
         });
 

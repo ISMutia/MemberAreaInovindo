@@ -19,6 +19,9 @@ public class DataItem{
 	@SerializedName("id")
 	private int id;
 
+	@SerializedName("fullname")
+	private String fullname;
+
 	public int getIdCustomers(){
 		return idCustomers;
 	}
@@ -37,5 +40,9 @@ public class DataItem{
 
 	public int getId(){
 		return id;
+	}
+
+	public String getFullname(){
+		return fullname;
 	}
 }
