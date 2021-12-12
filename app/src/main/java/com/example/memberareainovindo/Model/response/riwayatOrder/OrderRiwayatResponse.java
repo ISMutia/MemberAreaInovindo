@@ -1,9 +1,10 @@
-package com.example.memberareainovindo.Model.response.riwayatorder;
+package com.example.memberareainovindo.Model.response.riwayatOrder;
 
-import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class RiwayatOrderResponse{
+import java.util.List;
+
+public class OrderRiwayatResponse{
 
 	@SerializedName("data")
 	private List<DataItem> data;
