@@ -64,11 +64,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginLeft="30dp"/>
 
-        <Spinner
+        <EditText
             android:id="@+id/spinJenisPaket"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/jenisPaket"
             android:paddingTop="18dp"
             android:paddingBottom="18dp"
             android:background="@drawable/outline"
@@ -85,11 +84,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginLeft="30dp"/>
 
-        <Spinner
+        <EditText
             android:id="@+id/spinJenisDomain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/jenisDomain"
             android:paddingTop="18dp"
             android:paddingBottom="18dp"
             android:background="@drawable/outline"

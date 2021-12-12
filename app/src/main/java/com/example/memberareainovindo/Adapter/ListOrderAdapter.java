@@ -47,13 +47,17 @@ public class ListOrderAdapter extends RecyclerView.Adapter<ListOrderAdapter.View
         }
 
         public void bindData(DataItem dataItem) {
-            binding.txtIdOrder.setText(dataItem.getId());
+
+            binding.txtIdOrder.setText(dataItem.getId()+"");
             binding.txtPName1.setText(dataItem.getProjectName());
             binding.txtLama1.setText(dataItem.getLamaP());
-            //binding.txtPType2.setText(dataItem.getIdPrice());
+            binding.txtFDomain1.setText(dataItem.getLamaDomain());
             binding.txtSWork1.setText(dataItem.getMulaiP());
             binding.txtFWork1.setText(dataItem.getSelesaiP());
-            //binding.txtFDomain1.setText(dataItem.getLamaDomain());
+            binding.txtPType2.setText(dataItem.getPriceName());
+            binding.txtTypeDomain1.setText(dataItem.getDomainName());
+            binding.txtStatus.setText(dataItem.getStatusName());
+
 
         }
     }

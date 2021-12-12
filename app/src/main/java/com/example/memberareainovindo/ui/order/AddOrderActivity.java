@@ -12,6 +12,8 @@ import com.example.memberareainovindo.Model.response.orderAdd.FormResponse;
 import com.example.memberareainovindo.Model.response.orderAdd.PriceItem;
 import com.example.memberareainovindo.databinding.ActivityAddOrderBinding;
 import com.example.memberareainovindo.ui.paket.InfoPaketActivity;
+import com.gzeinnumer.eom.DynamicOptionMenuBuilder;
+import com.gzeinnumer.eom.dialog.DynamicOptionMenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,13 +52,53 @@ public class AddOrderActivity extends AppCompatActivity {
                 startActivity(gotoinfo);
             }
         });
+
+        binding.spinJenisPaket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialogPrice();
+            }
+        });
+
+        binding.spinJenisDomain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialogDomain();
+            }
+        });
+    }
+
+    private void openDialogDomain() {
+        new DynamicOptionMenuBuilder<DomainItem>(getSupportFragmentManager())
+                .builder(domain)
+                .setTitle("Choise Domain")
+
+                .finalCallBack(new DynamicOptionMenu.CallBackFinal<DomainItem>() {
+                    @Override
+                    public void positionItem(DomainItem data) {
+                        binding.spinJenisDomain.setText(data.getName());
+                    }
+                })
+                .show();
+    }
+
+    private void openDialogPrice() {
+        new DynamicOptionMenuBuilder<PriceItem>(getSupportFragmentManager())
+                .builder(price)
+                .setTitle("Choise Price")
+
+                .finalCallBack(new DynamicOptionMenu.CallBackFinal<PriceItem>() {
+                    @Override
+                    public void positionItem(PriceItem data) {
+                        binding.spinJenisPaket.setText(data.getName());
+                    }
+                })
+                .show();
     }
 
     private List<PriceItem> price=new ArrayList<>();
 
     private List<DomainItem> domain=new ArrayList<>();
-
-
 
     private void loadFormData() {
         RetroServer.getInstance()
