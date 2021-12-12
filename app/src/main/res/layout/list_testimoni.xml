@@ -2,23 +2,22 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvList_Testimo"
-    android:layout_width="320dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
     app:cardBackgroundColor="@color/cardview"
     app:cardCornerRadius="15dp"
-    app:cardElevation="20dp"
-    android:layout_gravity="center_horizontal">
+    app:cardElevation="20dp">
 
     <LinearLayout
-        android:layout_width="320dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="320dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="10dp">
@@ -36,18 +35,16 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="320dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtTestiCus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nice"
-                android:textStyle="bold"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginBottom="25dp"/>
         </LinearLayout>
@@ -55,4 +52,3 @@
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
-

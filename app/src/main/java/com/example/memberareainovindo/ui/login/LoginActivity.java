@@ -10,9 +10,7 @@ import com.example.memberareainovindo.Api.RetroServer;
 import com.example.memberareainovindo.ForgotPassword;
 import com.example.memberareainovindo.Model.body.LoginBody;
 import com.example.memberareainovindo.Model.response.login.LoginResponse;
-import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityLoginBinding;
-import com.example.memberareainovindo.ui.dashboard.MainActivity;
 import com.example.memberareainovindo.ui.register.RegisterActivity;
 
 import retrofit2.Call;
@@ -26,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
     //ActivityLoginBinding
     //activity_login
     private ActivityLoginBinding binding;
-    private SessionManager mSessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,23 +31,13 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        mSessionManager = new SessionManager(this);
-
         initView();
         initOnClick();
     }
 
     private void initView() {
-//        binding.mEmail.setText("adikmutia@gmail.com");
-//        binding.mPassword.setText("12345678");
-        if (mSessionManager.getFullname()!=null){
-            Intent int3 = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(int3);
-            return;
-        }else {
-            Toast.makeText(this, "Anda belum login nichh!", Toast.LENGTH_SHORT).show();
-
-        }
+        binding.mEmail.setText("adikmutia@gmail.com");
+        binding.mPassword.setText("12345678");
     }
 
     private void initOnClick() {
@@ -88,17 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                 .enqueue(new Callback<LoginResponse>() {
                     @Override
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-//                        Toast.makeText(LoginActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
-                        if (response.body().getStatus().equals("success")){
-                            mSessionManager.setFullname(response.body().getData().getFullname());
-
-                            Intent int3 = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(int3);
-                        }
-                        else {
-                            Toast.makeText(LoginActivity.this, "email atau password salah", Toast.LENGTH_SHORT).show();
-                        }
-
+                        Toast.makeText(LoginActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

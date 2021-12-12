@@ -1,6 +1,8 @@
 package com.example.memberareainovindo.ui.testimoni;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +12,8 @@ import com.example.memberareainovindo.Api.RetroServer;
 import com.example.memberareainovindo.Model.response.testimoni.DataItem;
 import com.example.memberareainovindo.Model.response.testimoni.TestimoniResponse;
 import com.example.memberareainovindo.databinding.ActivityListTestimoniBinding;
+import com.example.memberareainovindo.ui.order.AddOrderActivity;
+import com.example.memberareainovindo.ui.order.ListOrderActivity;
 
 import java.util.List;
 
@@ -28,11 +32,24 @@ public class ListTestimoniActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         initView();
+        initOnClick();
     }
+
 
     private void initView() {
         loadDataTestimoni();
     }
+
+    private void initOnClick() {
+        binding.fabTambahTesti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoaddtesti = new Intent(ListTestimoniActivity.this, AddTestimoniActivity.class);
+                startActivity(gotoaddtesti);
+            }
+        });
+    }
+
 
     private void loadDataTestimoni() {
         RetroServer.getInstance()
