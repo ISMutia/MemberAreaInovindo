@@ -91,6 +91,7 @@ public class LoginActivity extends AppCompatActivity {
 //                        Toast.makeText(LoginActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
                         if (response.body().getStatus().equals("success")){
                             mSessionManager.setFullname(response.body().getData().getFullname());
+                            mSessionManager.setId(response.body().getData().getId()+"");
 
                             Intent int3 = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(int3);

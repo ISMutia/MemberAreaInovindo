@@ -12,6 +12,7 @@ import com.example.memberareainovindo.Model.response.orderAdd.OrderAddResponse;
 import com.example.memberareainovindo.Model.response.orderForm.DomainItem;
 import com.example.memberareainovindo.Model.response.orderForm.FormResponse;
 import com.example.memberareainovindo.Model.response.orderForm.PriceItem;
+import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityAddOrderBinding;
 import com.example.memberareainovindo.ui.paket.InfoPaketActivity;
 import com.gzeinnumer.ad.AdapterAutoCompleteText;
@@ -26,12 +27,15 @@ import retrofit2.Response;
 public class AddOrderActivity extends AppCompatActivity {
 
     private ActivityAddOrderBinding binding;
+    private SessionManager mSessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityAddOrderBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        mSessionManager = new SessionManager(this);
 
         initView();
         initOnClick();
@@ -67,13 +71,15 @@ public class AddOrderActivity extends AppCompatActivity {
     }
 
     private void sendData() {
+        String id = mSessionManager.getId();
+
         OrderAddBody body = new OrderAddBody();
         body.setMulaiP("2021-10-01");
         body.setSelesaiP("2021-10-01");
         body.setLamaDomain("2021-10-01");
         body.setIdDomain(idDomain+"");
         body.setIdPrice(idPrice+"");
-        body.setIdCustomers(1+"");
+        body.setIdCustomers(id);
         body.setProjectName(binding.edtProjectName.getText().toString());
         body.setLamaP("2 bulan");
 

@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 public class SessionManager {
     private String PREF_NAME = "SIMPAN";
     private String KEY_FULLNAME = "fullname";
+    private String KEY_ID_USER = "id";
 
 
     private SharedPreferences mSharedPreferences;
@@ -27,5 +28,14 @@ public class SessionManager {
     public void logout() {
         mEditor = mSharedPreferences.edit();
         mEditor.clear().commit();
+    }
+
+    public void setId(String id) {
+        mEditor = mSharedPreferences.edit();
+        mEditor.putString(KEY_ID_USER, id).apply();
+    }
+
+    public String getId() {
+        return mSharedPreferences.getString(KEY_ID_USER, null);
     }
 }

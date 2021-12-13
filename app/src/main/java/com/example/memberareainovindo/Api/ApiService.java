@@ -19,6 +19,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface ApiService {
 
@@ -30,8 +31,8 @@ public interface ApiService {
     @POST("userRegister")
     Call<RegisterResponse> register(@Body RegisterBody body);
 
-    @GET("orderList")
-    Call<OrderResponse> orderList();
+    @GET("orderList/{id}")
+    Call<OrderResponse> orderList(@Path("id") String id);
 
     @GET("orderRiwayat")
     Call<OrderRiwayatResponse> orderRiwayat();
