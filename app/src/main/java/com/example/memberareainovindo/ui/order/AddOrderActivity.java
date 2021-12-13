@@ -2,18 +2,19 @@ package com.example.memberareainovindo.ui.order;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.memberareainovindo.Api.RetroServer;
-import com.example.memberareainovindo.Model.response.orderAdd.DomainItem;
-import com.example.memberareainovindo.Model.response.orderAdd.FormResponse;
-import com.example.memberareainovindo.Model.response.orderAdd.PriceItem;
+import com.example.memberareainovindo.Model.body.OrderAddBody;
+import com.example.memberareainovindo.Model.response.orderAdd.OrderAddResponse;
+import com.example.memberareainovindo.Model.response.orderForm.DomainItem;
+import com.example.memberareainovindo.Model.response.orderForm.FormResponse;
+import com.example.memberareainovindo.Model.response.orderForm.PriceItem;
 import com.example.memberareainovindo.databinding.ActivityAddOrderBinding;
 import com.example.memberareainovindo.ui.paket.InfoPaketActivity;
-import com.gzeinnumer.eom.DynamicOptionMenuBuilder;
-import com.gzeinnumer.eom.dialog.DynamicOptionMenu;
+import com.gzeinnumer.ad.AdapterAutoCompleteText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,87 +35,95 @@ public class AddOrderActivity extends AppCompatActivity {
 
         initView();
         initOnClick();
-
-
     }
-
 
     private void initView() {
         loadFormData();
-
     }
 
     private void initOnClick() {
-        binding.txtInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoinfo = new Intent(AddOrderActivity.this, InfoPaketActivity.class);
-                startActivity(gotoinfo);
-            }
+        binding.txtInfo.setOnClickListener(v -> {
+            Intent gotoinfo = new Intent(AddOrderActivity.this, InfoPaketActivity.class);
+            startActivity(gotoinfo);
         });
 
-//        binding.spinJenisPaket.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openDialogPrice();
-//            }
-//        });
-
-        binding.spinJenisPaket.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus){
-                    binding.spinJenisPaket.clearFocus();
-                    try {
-                        openDialogPrice();
-
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
-                }
-
-            }
-        });
-
-        binding.spinJenisDomain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openDialogDomain();
-            }
+        binding.btnSubmitOrder.setOnClickListener(v -> {
+            cekForm();
         });
     }
+
+    private void cekForm() {
+        if (binding.edtProjectName.getText().toString().length() == 0) {
+            Toast.makeText(this, "project name tidak boleh kosong", Toast.LENGTH_SHORT).show();
+        } else if (binding.actPrice.getText().toString().length() == 0) {
+            Toast.makeText(this, "Price tidak boleh kosong", Toast.LENGTH_SHORT).show();
+        } else if (binding.actDomain.getText().toString().length() == 0) {
+            Toast.makeText(this, "Domain tidak boleh kosong", Toast.LENGTH_SHORT).show();
+        } else {
+            sendData();
+            Toast.makeText(this, "Simpan  data", Toast.LENGTH_SHORT).show();
+
+        }
+    }
+
+    private void sendData() {
+        OrderAddBody body = new OrderAddBody();
+        body.setMulaiP("2021-10-01");
+        body.setSelesaiP("2021-10-01");
+        body.setLamaDomain("2021-10-01");
+        body.setIdDomain(idDomain+"");
+        body.setIdPrice(idPrice+"");
+        body.setIdCustomers(1+"");
+        body.setProjectName(binding.edtProjectName.getText().toString());
+        body.setLamaP("2 bulan");
+
+        RetroServer.getInstance()
+                .orderAdd(body)
+                .enqueue(new Callback<OrderAddResponse>() {
+                    @Override
+                    public void onResponse(Call<OrderAddResponse> call, Response<OrderAddResponse> response) {
+                        if (response.body().getStatus().equals("success")){
+                            Toast.makeText(AddOrderActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<OrderAddResponse> call, Throwable t) {
+
+                    }
+                });
+    }
+
+    int idDomain = 0;
 
     private void openDialogDomain() {
-        new DynamicOptionMenuBuilder<DomainItem>(getSupportFragmentManager())
-                .builder(domain)
-                .setTitle("Choise Domain")
+        AdapterAutoCompleteText<DomainItem> adapter = new AdapterAutoCompleteText<DomainItem>(getApplicationContext(), domain);
+        binding.actDomain.setAdapter(adapter);
+        binding.actDomain.setFreezesText(false);
 
-                .finalCallBack(new DynamicOptionMenu.CallBackFinal<DomainItem>() {
-                    @Override
-                    public void positionItem(DomainItem data) {
-                        binding.spinJenisDomain.setText(data.getName());
-                    }
-                })
-                .show();
+        binding.actDomain.setOnItemClickListener((parent, view, position, id) -> {
+            idDomain = domain.get(position).getId();
+            binding.actDomain.setText(domain.get(position).getName(), false);
+        });
     }
+
+    int idPrice = 0;
 
     private void openDialogPrice() {
-        new DynamicOptionMenuBuilder<PriceItem>(getSupportFragmentManager())
-                .builder(price)
-                .setTitle("Choise Price")
+        AdapterAutoCompleteText<PriceItem> adapter = new AdapterAutoCompleteText<PriceItem>(getApplicationContext(), price);
+        binding.actPrice.setAdapter(adapter);
+        binding.actPrice.setFreezesText(false);
 
-                .finalCallBack(new DynamicOptionMenu.CallBackFinal<PriceItem>() {
-                    @Override
-                    public void positionItem(PriceItem data) {
-                        binding.spinJenisPaket.setText(data.getName());
-                    }
-                })
-                .show();
+        binding.actPrice.setOnItemClickListener((parent, view, position, id) -> {
+            idPrice = price.get(position).getId();
+            binding.actPrice.setText(price.get(position).getName(), false);
+        });
     }
 
-    private List<PriceItem> price=new ArrayList<>();
+    private List<PriceItem> price = new ArrayList<>();
 
-    private List<DomainItem> domain=new ArrayList<>();
+    private List<DomainItem> domain = new ArrayList<>();
 
     private void loadFormData() {
         RetroServer.getInstance()
@@ -123,9 +132,13 @@ public class AddOrderActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<FormResponse> call, Response<FormResponse> response) {
                         //Toast.makeText(AddOrderActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
-                        if (response.body().getStatus().equals("success")){
+                        if (response.body().getStatus().equals("success")) {
                             price = response.body().getPrice();
                             domain = response.body().getDomain();
+
+                            openDialogPrice();
+                            openDialogDomain();
+                            Toast.makeText(AddOrderActivity.this, "data loaded", Toast.LENGTH_SHORT).show();
                         }
                     }
 

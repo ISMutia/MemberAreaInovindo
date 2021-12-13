@@ -1,4 +1,4 @@
-package com.example.memberareainovindo.Model.response.orderAdd;
+package com.example.memberareainovindo.Model.response.orderForm;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -20,9 +20,6 @@ public class DomainItem{
 
 	@Override
 	public String toString() {
-		return "DomainItem{" +
-				"name='" + name + '\'' +
-				", id=" + id +
-				'}';
+		return name;
 	}
 }

@@ -59,4 +59,36 @@ public class OrderAddBody{
 	public String getLamaP(){
 		return lamaP;
 	}
+
+	public void setMulaiP(String mulaiP) {
+		this.mulaiP = mulaiP;
+	}
+
+	public void setSelesaiP(String selesaiP) {
+		this.selesaiP = selesaiP;
+	}
+
+	public void setLamaDomain(String lamaDomain) {
+		this.lamaDomain = lamaDomain;
+	}
+
+	public void setIdDomain(String idDomain) {
+		this.idDomain = idDomain;
+	}
+
+	public void setIdPrice(String idPrice) {
+		this.idPrice = idPrice;
+	}
+
+	public void setIdCustomers(String idCustomers) {
+		this.idCustomers = idCustomers;
+	}
+
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+
+	public void setLamaP(String lamaP) {
+		this.lamaP = lamaP;
+	}
 }

@@ -2,7 +2,6 @@ package com.example.memberareainovindo.ui.order;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -46,12 +45,9 @@ public class ListOrderActivity extends AppCompatActivity {
     }
 
     private void initOnClick() {
-        binding.fabTambah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoaddorder = new Intent(ListOrderActivity.this, AddOrderActivity.class);
-                startActivity(gotoaddorder);
-            }
+        binding.fabTambah.setOnClickListener(v -> {
+            Intent gotoaddorder = new Intent(ListOrderActivity.this, AddOrderActivity.class);
+            startActivity(gotoaddorder);
         });
 
     }

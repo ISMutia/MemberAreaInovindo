@@ -4,97 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.order.AddOrderActivity"
-    android:background="@drawable/b4">
+    android:background="@drawable/b4"
+    tools:context=".ui.order.AddOrderActivity">
 
     <TextView
         android:id="@+id/txtAddOrder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
         android:layout_weight="1"
         android:text="Add Order"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="30dp"
         android:textColor="#304062"
-        android:textSize="30sp"/>
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
         android:layout_below="@id/txtAddOrder"
+        android:layout_marginTop="55dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtProjectName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Project Name"
-            android:textSize="20sp"
-            android:textColor="#6D6C6C"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="16dp"
-            android:layout_marginLeft="30dp"/>
+            android:text="Project Name"
+            android:textColor="#6D6C6C"
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="25dp"
             android:hint=""
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusBottomEnd="10dp">
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtProjectName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"/>
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Package"
-            android:textSize="20sp"
-            android:textColor="#6D6C6C"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="16dp"
-            android:layout_marginLeft="30dp"/>
+            android:text="Select Package"
+            android:textColor="#6D6C6C"
+            android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/spinJenisPaket"
-            android:editable="false"
-            android:inputType="none"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp"
-            android:background="@drawable/outline"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"/>
+            android:layout_marginRight="25dp"
+            android:background="@drawable/outline">
+
+            <AutoCompleteTextView
+                android:id="@+id/act_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/txtDomainName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Domain Name"
-            android:textSize="20sp"
-            android:textColor="#6D6C6C"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="16dp"
-            android:layout_marginLeft="30dp"/>
+            android:text="Domain Name"
+            android:textColor="#6D6C6C"
+            android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/spinJenisDomain"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp"
-            android:background="@drawable/outline"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"/>
+            android:layout_marginRight="25dp"
+            android:background="@drawable/outline">
+
+            <AutoCompleteTextView
+                android:id="@+id/act_domain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/txtInfo"
@@ -112,18 +122,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="Submit"
-            android:textSize="18sp"
-            android:backgroundTint="#20A8E3"
-            android:layout_marginTop="30dp"
             android:layout_marginLeft="123dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="123dp"
+            android:backgroundTint="#20A8E3"
             android:paddingTop="17dp"
             android:paddingBottom="17dp"
-            app:cornerRadius="15dp"/>
+            android:text="Submit"
+            android:textSize="18sp"
+            app:cornerRadius="15dp" />
 
     </LinearLayout>
-
 
 
 </RelativeLayout>
