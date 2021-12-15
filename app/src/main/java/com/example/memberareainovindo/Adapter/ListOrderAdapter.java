@@ -14,6 +14,7 @@ import java.util.List;
 public class ListOrderAdapter extends RecyclerView.Adapter<ListOrderAdapter.ViewHolder> {
     final List<DataItem> lisItem;
 
+
     public ListOrderAdapter(List<DataItem> lisItem) {
         this.lisItem = lisItem;
     }
@@ -27,7 +28,6 @@ public class ListOrderAdapter extends RecyclerView.Adapter<ListOrderAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.bindData(lisItem.get(position));
-        // jika ada item
     }
 
     @Override
@@ -35,30 +35,26 @@ public class ListOrderAdapter extends RecyclerView.Adapter<ListOrderAdapter.View
         return lisItem.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         ListOrderBinding binding;
 
         public ViewHolder(@NonNull ListOrderBinding itemView) {
             super(itemView.getRoot());
 
             binding = itemView;
-
-            // deklarasi variable widget
         }
 
-        public void bindData(DataItem dataItem) {
 
-            binding.txtIdOrder.setText(dataItem.getId()+"");
+        public void bindData(DataItem dataItem) {
+            binding.txtIdOrder.setText(dataItem.getId());
             binding.txtPName1.setText(dataItem.getProjectName());
             binding.txtLama1.setText(dataItem.getLamaP());
-            binding.txtFDomain1.setText(dataItem.getLamaDomain());
+            binding.txtPType2.setText(dataItem.getPriceName());
+            binding.txtTypeDomain1.setText(dataItem.getNameDomain());
             binding.txtSWork1.setText(dataItem.getMulaiP());
             binding.txtFWork1.setText(dataItem.getSelesaiP());
-            binding.txtPType2.setText(dataItem.getPriceName());
-            binding.txtTypeDomain1.setText(dataItem.getDomainName());
-            binding.txtStatus.setText(dataItem.getStatusName());
-
-
+            binding.txtFDomain1.setText(dataItem.getLamaDomain());
+            binding.txtWa.setText(dataItem.getLinkGroupWa());
         }
     }
 }

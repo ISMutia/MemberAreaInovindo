@@ -46,14 +46,14 @@ public interface ApiService {
     @GET("billList")
     Call<BillResponse> riwayatBills();
 
-    @GET("progressList")
-    Call<ProgressResponse> progressList();
+    @GET("progressList/{id}")
+    Call<ProgressResponse> progressList(@Path("id") String id);
 
     @GET("orderGetForm")
     Call<FormResponse> orderGetForm();
 
     @POST("testimoniAdd")
-    Call<TestimoniAddResponse> testiAdd(@Body TestimoniAddBody body);
+    Call<TestimoniAddResponse> testimoniAdd(@Body TestimoniAddBody body);
 
     @POST("orderAdd")
     Call<OrderAddResponse> orderAdd(@Body OrderAddBody body);

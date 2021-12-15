@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetroServer {
 
     //http://192.168.1.32/member-area/public/api/
-    private static final String base_url = "http://192.168.1.32/member-area/public/api/";
+    private static final String base_url = "http://192.168.96.32/member-area/public/api/";
 
     private static Retrofit setInit(){
         OkHttpClient client = new TokenInterceptor().getClient();

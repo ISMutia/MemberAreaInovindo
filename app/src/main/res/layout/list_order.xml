@@ -4,12 +4,10 @@
     android:id="@+id/cvList_order"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="5dp"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
     app:cardBackgroundColor="@color/cardview"
-    app:cardCornerRadius="15dp"
-    app:cardElevation="20dp"
     android:layout_gravity="center_horizontal">
 
     <LinearLayout
@@ -108,8 +106,7 @@
                 android:paddingLeft="15dp"
                 android:paddingBottom="15dp"
                 android:text="3 Bulan"
-                android:textSize="18sp"
-                 />
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -131,12 +128,12 @@
             <TextView
                 android:id="@+id/txtPType2"
                 android:layout_width="wrap_content"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
                 android:paddingBottom="15dp"
                 android:text="Gold"
                 android:textSize="18sp"
-                 />
+                />
 
         </LinearLayout>
         <LinearLayout
@@ -150,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
-                android:text="Domain :"
+                android:text="Domain Name :"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -160,9 +157,9 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
                 android:paddingBottom="15dp"
-                android:text=".co"
+                android:text="memberarea.com"
                 android:textSize="18sp"
-                 />
+                />
 
         </LinearLayout>
 
@@ -189,7 +186,7 @@
                 android:paddingBottom="15dp"
                 android:text="01 Oktober 2021"
                 android:textSize="18sp"
-                 />
+                />
 
         </LinearLayout>
 
@@ -216,7 +213,7 @@
                 android:paddingBottom="15dp"
                 android:text="31 Desember 2021"
                 android:textSize="18sp"
-                 />
+                />
 
         </LinearLayout>
 
@@ -243,7 +240,27 @@
                 android:paddingBottom="15dp"
                 android:text="31 Desember 2022"
                 android:textSize="18sp"
-                 />
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            >
+
+            <TextView
+                android:id="@+id/txtWa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:hint="wa"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                />
 
         </LinearLayout>
 
@@ -251,6 +268,3 @@
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
-
-
-

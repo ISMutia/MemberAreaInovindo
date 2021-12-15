@@ -10,7 +10,7 @@ public class TestimoniAddBody{
 	@SerializedName("description")
 	private String description;
 
-	public String getIdCustomers(){
+	public String getIdCustomers(String id){
 		return idCustomers;
 	}
 

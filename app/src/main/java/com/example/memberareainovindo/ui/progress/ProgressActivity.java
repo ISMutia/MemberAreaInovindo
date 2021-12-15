@@ -9,6 +9,7 @@ import com.example.memberareainovindo.Adapter.ProgressAdapter;
 import com.example.memberareainovindo.Api.RetroServer;
 import com.example.memberareainovindo.Model.response.progress.DataItem;
 import com.example.memberareainovindo.Model.response.progress.ProgressResponse;
+import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityProgressBinding;
 
 import java.util.List;
@@ -20,12 +21,15 @@ import retrofit2.Response;
 public class ProgressActivity extends AppCompatActivity {
 
     private ActivityProgressBinding binding;
+    private SessionManager mSessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityProgressBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        mSessionManager = new SessionManager(this);
 
         initView();
     }
@@ -35,8 +39,9 @@ public class ProgressActivity extends AppCompatActivity {
     }
 
     private void loadDataProgress() {
+        String id = mSessionManager.getId();
         RetroServer.getInstance()
-                .progressList()
+                .progressList(id)
                 .enqueue(new Callback<ProgressResponse>() {
             @Override
             public void onResponse(Call<ProgressResponse> call, Response<ProgressResponse> response) {

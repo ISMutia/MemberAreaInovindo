@@ -24,6 +24,7 @@ public class ListTestimoniActivity extends AppCompatActivity {
 
     private ActivityListTestimoniBinding binding;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
