@@ -61,8 +61,10 @@ public class AddOrderActivity extends AppCompatActivity {
             Toast.makeText(this, "project name tidak boleh kosong", Toast.LENGTH_SHORT).show();
         } else if (binding.actPrice.getText().toString().length() == 0) {
             Toast.makeText(this, "Price tidak boleh kosong", Toast.LENGTH_SHORT).show();
+        } else if (binding.edDomainName.getText().toString().length() == 0) {
+            Toast.makeText(this, "Domain name tidak boleh kosong", Toast.LENGTH_SHORT).show();
         } else if (binding.actDomain.getText().toString().length() == 0) {
-            Toast.makeText(this, "Domain tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Domain extention tidak boleh kosong", Toast.LENGTH_SHORT).show();
         } else {
             sendData();
             Toast.makeText(this, "Simpan  data", Toast.LENGTH_SHORT).show();
@@ -77,9 +79,10 @@ public class AddOrderActivity extends AppCompatActivity {
         body.setMulaiP("2021-10-01");
         body.setSelesaiP("2021-10-01");
         body.setLamaDomain("2021-10-01");
-        body.setIdDomain(idDomain+"");
-        body.setIdPrice(idPrice+"");
+        body.setIdDomain(idDomain + "");
+        body.setIdPrice(idPrice + "");
         body.setIdCustomers(id);
+        body.setNameDomain(binding.edDomainName.getText().toString());
         body.setProjectName(binding.edtProjectName.getText().toString());
         body.setLamaP("2 bulan");
 
@@ -88,7 +91,7 @@ public class AddOrderActivity extends AppCompatActivity {
                 .enqueue(new Callback<OrderAddResponse>() {
                     @Override
                     public void onResponse(Call<OrderAddResponse> call, Response<OrderAddResponse> response) {
-                        if (response.body().getStatus().equals("success")){
+                        if (response.body().getStatus().equals("success")) {
                             Toast.makeText(AddOrderActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
                         }
 

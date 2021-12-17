@@ -10,6 +10,9 @@ public class OrderAddBody{
 	@SerializedName("selesai_p")
 	private String selesaiP;
 
+	@SerializedName("link_group_wa")
+	private String linkGroupWa;
+
 	@SerializedName("lama_domain")
 	private String lamaDomain;
 
@@ -25,6 +28,9 @@ public class OrderAddBody{
 	@SerializedName("project_name")
 	private String projectName;
 
+	@SerializedName("name_domain")
+	private String nameDomain;
+
 	@SerializedName("lama_p")
 	private String lamaP;
 
@@ -34,6 +40,10 @@ public class OrderAddBody{
 
 	public String getSelesaiP(){
 		return selesaiP;
+	}
+
+	public String getLinkGroupWa(){
+		return linkGroupWa;
 	}
 
 	public String getLamaDomain(){
@@ -56,6 +66,10 @@ public class OrderAddBody{
 		return projectName;
 	}
 
+	public String getNameDomain(){
+		return nameDomain;
+	}
+
 	public String getLamaP(){
 		return lamaP;
 	}
@@ -66,6 +80,10 @@ public class OrderAddBody{
 
 	public void setSelesaiP(String selesaiP) {
 		this.selesaiP = selesaiP;
+	}
+
+	public void setLinkGroupWa(String linkGroupWa) {
+		this.linkGroupWa = linkGroupWa;
 	}
 
 	public void setLamaDomain(String lamaDomain) {
@@ -86,6 +104,10 @@ public class OrderAddBody{
 
 	public void setProjectName(String projectName) {
 		this.projectName = projectName;
+	}
+
+	public void setNameDomain(String nameDomain) {
+		this.nameDomain = nameDomain;
 	}
 
 	public void setLamaP(String lamaP) {

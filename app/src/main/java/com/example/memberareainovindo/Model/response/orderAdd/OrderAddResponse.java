@@ -8,6 +8,9 @@ public class OrderAddResponse{
 	@SerializedName("data")
 	private List<DataItem> data;
 
+	@SerializedName("id")
+	private int id;
+
 	@SerializedName("message")
 	private String message;
 
@@ -16,6 +19,10 @@ public class OrderAddResponse{
 
 	public List<DataItem> getData(){
 		return data;
+	}
+
+	public int getId(){
+		return id;
 	}
 
 	public String getMessage(){

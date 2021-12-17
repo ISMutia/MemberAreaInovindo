@@ -41,7 +41,7 @@ public class OrderActivity extends AppCompatActivity {
         initOnClick();
     }
     private void initView() {
-        loadDataOrder();
+
     }
 
     private void initOnClick() {
@@ -105,6 +105,10 @@ public class OrderActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-
+        loadDataOrder();
+    }
 }
