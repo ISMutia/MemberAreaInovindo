@@ -1,8 +1,7 @@
 package com.example.memberareainovindo.Model.response.riwayatOrder;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
+import com.google.gson.annotations.SerializedName;
 
 public class OrderRiwayatResponse{
 

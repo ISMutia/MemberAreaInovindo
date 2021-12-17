@@ -1,8 +1,7 @@
 package com.example.memberareainovindo.Model.response.testimoni;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
+import com.google.gson.annotations.SerializedName;
 
 public class TestimoniResponse{
 
@@ -18,13 +17,5 @@ public class TestimoniResponse{
 
 	public String getStatus(){
 		return status;
-	}
-
-	@Override
-	public String toString() {
-		return "TestimoniResponse{" +
-				"data=" + data +
-				", status='" + status + '\'' +
-				'}';
 	}
 }

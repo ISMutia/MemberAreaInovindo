@@ -22,6 +22,9 @@ public class DataItem{
 	@SerializedName("fullname")
 	private String fullname;
 
+	@SerializedName("status")
+	private String status;
+
 	public int getIdCustomers(){
 		return idCustomers;
 	}
@@ -46,15 +49,7 @@ public class DataItem{
 		return fullname;
 	}
 
-	@Override
-	public String toString() {
-		return "DataItem{" +
-				"idCustomers=" + idCustomers +
-				", updatedAt=" + updatedAt +
-				", description='" + description + '\'' +
-				", createdAt=" + createdAt +
-				", id=" + id +
-				", fullname='" + fullname + '\'' +
-				'}';
+	public String getStatus(){
+		return status;
 	}
 }

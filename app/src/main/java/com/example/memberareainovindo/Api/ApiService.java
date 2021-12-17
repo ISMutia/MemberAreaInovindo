@@ -31,8 +31,8 @@ public interface ApiService {
     @POST("userRegister")
     Call<RegisterResponse> register(@Body RegisterBody body);
 
-    @GET("orderList/{id}")
-    Call<OrderResponse> orderList(@Path("id") String id);
+    @GET("orderList")
+    Call<OrderResponse> orderList(@Path("id")String id);
 
     @GET("orderRiwayat")
     Call<OrderRiwayatResponse> orderRiwayat();

@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class DataItem{
 
+	@SerializedName("link_group_wa")
+	private String linkGroupWa;
+
 	@SerializedName("id_domain")
 	private int idDomain;
 
@@ -25,6 +28,9 @@ public class DataItem{
 	@SerializedName("project_name")
 	private String projectName;
 
+	@SerializedName("name_domain")
+	private String nameDomain;
+
 	@SerializedName("lama_p")
 	private String lamaP;
 
@@ -41,10 +47,14 @@ public class DataItem{
 	private int idCustomers;
 
 	@SerializedName("updated_at")
-	private Object updatedAt;
+	private String updatedAt;
 
 	@SerializedName("id")
 	private int id;
+
+	public String getLinkGroupWa(){
+		return linkGroupWa;
+	}
 
 	public int getIdDomain(){
 		return idDomain;
@@ -74,6 +84,10 @@ public class DataItem{
 		return projectName;
 	}
 
+	public String getNameDomain(){
+		return nameDomain;
+	}
+
 	public String getLamaP(){
 		return lamaP;
 	}
@@ -94,7 +108,7 @@ public class DataItem{
 		return idCustomers;
 	}
 
-	public Object getUpdatedAt(){
+	public String getUpdatedAt(){
 		return updatedAt;
 	}
 

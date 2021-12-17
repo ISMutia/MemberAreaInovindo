@@ -11,39 +11,38 @@ import com.example.memberareainovindo.databinding.ListOrderBinding;
 
 import java.util.List;
 
-public class ListOrderAdapter extends RecyclerView.Adapter<ListOrderAdapter.ViewHolder> {
-    final List<DataItem> lisItem;
+public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> {
+    final List<DataItem> listItem;
 
+    public OrderAdapter(List<DataItem> listItem) {
+        this.listItem = listItem;
 
-    public ListOrderAdapter(List<DataItem> lisItem) {
-        this.lisItem = lisItem;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(ListOrderBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+        return new ViewHolder(ListOrderBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false));
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.bindData(lisItem.get(position));
+        holder.bindData(listItem.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return lisItem.size();
+        return listItem.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ListOrderBinding binding;
-
-        public ViewHolder(@NonNull ListOrderBinding itemView) {
+        public ViewHolder( @NonNull ListOrderBinding itemView) {
             super(itemView.getRoot());
 
             binding = itemView;
         }
-
 
         public void bindData(DataItem dataItem) {
             binding.txtIdOrder.setText(dataItem.getId());

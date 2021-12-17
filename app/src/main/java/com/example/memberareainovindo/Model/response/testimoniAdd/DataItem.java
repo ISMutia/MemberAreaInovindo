@@ -8,7 +8,7 @@ public class DataItem{
 	private int idCustomers;
 
 	@SerializedName("updated_at")
-	private Object updatedAt;
+	private String updatedAt;
 
 	@SerializedName("description")
 	private String description;
@@ -19,11 +19,14 @@ public class DataItem{
 	@SerializedName("id")
 	private int id;
 
+	@SerializedName("status")
+	private String status;
+
 	public int getIdCustomers(){
 		return idCustomers;
 	}
 
-	public Object getUpdatedAt(){
+	public String getUpdatedAt(){
 		return updatedAt;
 	}
 
@@ -39,14 +42,7 @@ public class DataItem{
 		return id;
 	}
 
-	@Override
-	public String toString() {
-		return "DataItem{" +
-				"idCustomers=" + idCustomers +
-				", updatedAt=" + updatedAt +
-				", description='" + description + '\'' +
-				", createdAt=" + createdAt +
-				", id=" + id +
-				'}';
+	public String getStatus(){
+		return status;
 	}
 }

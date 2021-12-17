@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DesignSurface">
-    <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/drawable-v24/background_filled_yellow_radius.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/drawable/ic_dropdown.xml" value="0.19282051282051282" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_add_testimoni.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_bill.xml" value="0.16666666666666666" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_forgot_password.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_info_paket.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_list_order.xml" value="0.22" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_profile.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_progress.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_riwayat_bill.xml" value="0.1796875" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_riwayat_order.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/activity_testimoni.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/detail_paket_gold.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/list_bill.xml" value="0.22" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/list_notification.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/list_order.xml" value="0.22" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/list_paket.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/list_riwayat.xml" value="0.1" />
-        <entry key="..\:/MemberAreaInovindo/app/src/main/res/layout/list_riwayat_order.xml" value="0.1" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/MemberAreaInovindo/app/src/main/res/layout/activity_list.xml" value="0.10144927536231885" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/MemberAreaInovindo/app/src/main/res/layout/activity_list_order.xml" value="0.10144927536231885" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/MemberAreaInovindo/app/src/main/res/layout/activity_profile.xml" value="0.10144927536231885" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/MemberAreaInovindo/app/src/main/res/layout/list_order.xml" value="0.10144927536231885" />
-      </map>
-    </option>
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

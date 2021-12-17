@@ -59,7 +59,6 @@ public class AddTestimoniActivity extends AppCompatActivity {
 
         TestimoniAddBody body = new TestimoniAddBody();
         body.getIdCustomers(id);
-
         body.setDescription(binding.edtTestimoni.getText().toString());
 
         RetroServer.getInstance()
