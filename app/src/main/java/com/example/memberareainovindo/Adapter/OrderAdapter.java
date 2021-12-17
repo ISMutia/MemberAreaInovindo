@@ -45,7 +45,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         }
 
         public void bindData(DataItem dataItem) {
-            binding.txtIdOrder.setText(dataItem.getId());
+            binding.txtIdOrder.setText(dataItem.getId()+"");
             binding.txtPName1.setText(dataItem.getProjectName());
             binding.txtLama1.setText(dataItem.getLamaP());
             binding.txtPType2.setText(dataItem.getPriceName());

@@ -17,11 +17,39 @@ import com.example.memberareainovindo.Model.response.testimoniAdd.TestimoniAddRe
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiService {
+    //   query?id=1
+    @GET("query")
+    Call<String> query(@Query("id") int id);
+
+    //   query/1
+    //   query/id
+    @GET("path/{id}")
+    Call<String> path(@Path("id") int id);
+
+    /*
+    {
+      "id" : "1"
+    }
+     */
+    @FormUrlEncoded
+    @POST("post1")
+    Call<String> post1(@Field("id") int id);
+
+    /*
+    {
+      "id" : "1"
+    }
+     */
+    @POST("post2")
+    Call<String> post2(@Body int id);
 
     //http://member-area.test/api/
     //userLogin
@@ -31,8 +59,8 @@ public interface ApiService {
     @POST("userRegister")
     Call<RegisterResponse> register(@Body RegisterBody body);
 
-    @GET("orderList")
-    Call<OrderResponse> orderList(@Path("id")String id);
+    @GET("orderList/{id}")
+    Call<OrderResponse> orderList(@Path("id") String id);
 
     @GET("orderRiwayat")
     Call<OrderRiwayatResponse> orderRiwayat();
