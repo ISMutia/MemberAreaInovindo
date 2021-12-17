@@ -75,7 +75,7 @@
                 android:id="@+id/txtDomain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Domain :"
+                android:text="Domain Name:"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:layout_marginLeft="15dp"/>
