@@ -59,16 +59,16 @@ public class AddOrderActivity extends AppCompatActivity {
 
     private void cekForm() {
         if (binding.edtProjectName.getText().toString().length() == 0) {
-            Toast.makeText(this, "project name tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
         } else if (binding.actPrice.getText().toString().length() == 0) {
-            Toast.makeText(this, "Price tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
         } else if (binding.edDomainName.getText().toString().length() == 0) {
-            Toast.makeText(this, "Domain name tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
         } else if (binding.actDomain.getText().toString().length() == 0) {
-            Toast.makeText(this, "Domain extention tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
         } else {
             sendData();
-            Toast.makeText(this, "Simpan  data", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Simpan  data", Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -93,7 +93,7 @@ public class AddOrderActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<OrderAddResponse> call, Response<OrderAddResponse> response) {
                         if (response.body().getStatus().equals("success")) {
-                            Toast.makeText(AddOrderActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(AddOrderActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
                             Intent gotobill = new Intent(AddOrderActivity.this, BillActivity.class);
                             startActivity(gotobill);
                         }

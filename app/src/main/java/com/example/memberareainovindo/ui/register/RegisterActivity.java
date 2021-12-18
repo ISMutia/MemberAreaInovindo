@@ -79,19 +79,19 @@ public class RegisterActivity extends AppCompatActivity {
         String pass = binding.mPassword1.getText().toString();
 
         if (fullname.length() == 0) {
-            Toast.makeText(this, "Fullname tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
             return;
         }
         if (date_birth.length() == 0) {
-            Toast.makeText(this, "Datebirth tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
             return;
         }
         if (email.length() == 0) {
-            Toast.makeText(this, "Email tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
             return;
         }
         if (pass.length() == 0) {
-            Toast.makeText(this, "Password tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -111,7 +111,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Intent intRegister = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(intRegister);
                         } else {
-                            Toast.makeText(RegisterActivity.this, "Data salah", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Data Wrong!!", Toast.LENGTH_SHORT).show();
                         }
 
                     }

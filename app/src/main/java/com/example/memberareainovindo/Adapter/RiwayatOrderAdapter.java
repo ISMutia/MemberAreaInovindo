@@ -49,7 +49,7 @@ public class RiwayatOrderAdapter extends RecyclerView.Adapter<RiwayatOrderAdapte
         public void bindData(DataItem dataItem) {
             binding.txtPNameB.setText(dataItem.getProjectName());
             binding.txtIdBills.setText(dataItem.getNoBill()+"");
-            //binding.txtStatus.setText(dataItem.getStatusName());
+            binding.txtDname1.setText(dataItem.getNameDomain());
             binding.txtTypePaket1.setText(dataItem.getPriceName());
             binding.txtDate.setText(dataItem.getCreatedAt()+"");
 

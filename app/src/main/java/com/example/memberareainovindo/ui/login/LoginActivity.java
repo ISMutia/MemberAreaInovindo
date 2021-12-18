@@ -71,11 +71,11 @@ public class LoginActivity extends AppCompatActivity {
         String email = binding.mEmail.getText().toString();
         String pass = binding.mPassword.getText().toString();
         if (email.length() == 0) {
-            Toast.makeText(this, "Email tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
             return;
         }
         if (pass.length() == 0) {
-            Toast.makeText(this, "Password tidak boleh kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(int3);
                         }
                         else {
-                            Toast.makeText(LoginActivity.this, "email atau password salah", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Email or Password wrong!", Toast.LENGTH_SHORT).show();
                         }
 
                     }

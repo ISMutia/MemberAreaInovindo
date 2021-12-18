@@ -41,6 +41,7 @@ public class OrderActivity extends AppCompatActivity {
 
         mSessionManager = new SessionManager(this);
 
+
         initView();
         initOnClick();
     }

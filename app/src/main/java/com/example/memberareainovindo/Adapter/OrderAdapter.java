@@ -1,5 +1,6 @@
 package com.example.memberareainovindo.Adapter;
 
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -23,7 +24,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(ListOrderBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false));
-
     }
 
     @Override
@@ -54,6 +54,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             binding.txtFWork1.setText(dataItem.getSelesaiP());
             binding.txtFDomain1.setText(dataItem.getLamaDomain());
             binding.txtWa.setText(dataItem.getLinkGroupWa());
+//            binding.txtWa.setMovementMethod(LinkMovementMethod.getInstance());
             binding.txtStatus.setText(dataItem.getStatusName());
         }
     }

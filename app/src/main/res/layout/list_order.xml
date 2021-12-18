@@ -254,7 +254,10 @@
                 android:hint=""
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:clickable="true"
+                android:layout_marginBottom="15dp"
+                />
 
         </LinearLayout>
 

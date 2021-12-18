@@ -49,10 +49,10 @@ public class AddTestimoniActivity extends AppCompatActivity {
 
     private void btnSTestiAction() {
         if (binding.edtTestimoni.getText().toString().length() == 0) {
-            Toast.makeText(this, "This Field Can't Be Empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
         } else {
             sendData();
-            Toast.makeText(this, "Data Save", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Data Save", Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -70,7 +70,7 @@ public class AddTestimoniActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<TestimoniAddResponse> call, Response<TestimoniAddResponse> response) {
                         if (response.body().getStatus().equals("success")){
-                            Toast.makeText(AddTestimoniActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(AddTestimoniActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
                             Intent intRegister = new Intent(AddTestimoniActivity.this, ListTestimoniActivity.class);
                             startActivity(intRegister);
                         }
