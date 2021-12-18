@@ -29,21 +29,13 @@
             android:layout_gravity="center"
             android:background="@drawable/ic_account" />
 
-        <TextView
-            android:id="@+id/txtInformasiAkun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="Account Information :"
-            android:textColor="#6D6C6C"
-            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/txtFullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
+
             android:text="Fullname"
             android:textColor="#6D6C6C"
             android:textSize="15sp" />
@@ -205,15 +197,24 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="123dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="123dp"
             android:backgroundTint="#20A8E3"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"
             android:text="Sign Out"
             android:textSize="15sp"
             app:cornerRadius="15dp" />
 
     </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttom_navigation"
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
