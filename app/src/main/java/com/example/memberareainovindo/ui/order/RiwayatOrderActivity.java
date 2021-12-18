@@ -31,18 +31,12 @@ public class RiwayatOrderActivity extends AppCompatActivity {
 
         mSessionManager = new SessionManager(this);
 
-
         initView();
-//        initOnClick();
-
     }
 
     private void initView() {
         loadDataRiwayat();
     }
-
-//    private void initOnClick() {
-//    }
 
     private void loadDataRiwayat() {
         String id = mSessionManager.getId();
@@ -52,7 +46,7 @@ public class RiwayatOrderActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<OrderRiwayatResponse> call, Response<OrderRiwayatResponse> response) {
                         if (response.body().getData() != null) {
-                        initRvRiwayat(response.body().getData());
+                            initRvRiwayat(response.body().getData());
                         }
                     }
 
@@ -69,12 +63,8 @@ public class RiwayatOrderActivity extends AppCompatActivity {
             binding.rvlistRiwayatOrder.setAdapter(adapter);
             binding.rvlistRiwayatOrder.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
             binding.rvlistRiwayatOrder.hasFixedSize();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-
-
-
 }

@@ -39,11 +39,8 @@ public class AddTestimoniActivity extends AppCompatActivity {
     }
 
     private void initOnClick() {
-        binding.btnSubmitTestimoni.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnSTestiAction();
-            }
+        binding.btnSubmitTestimoni.setOnClickListener(v -> {
+            btnSTestiAction();
         });
     }
 
@@ -52,8 +49,6 @@ public class AddTestimoniActivity extends AppCompatActivity {
             Toast.makeText(this, "This field can't empty!", Toast.LENGTH_SHORT).show();
         } else {
             sendData();
-//            Toast.makeText(this, "Data Save", Toast.LENGTH_SHORT).show();
-
         }
     }
 

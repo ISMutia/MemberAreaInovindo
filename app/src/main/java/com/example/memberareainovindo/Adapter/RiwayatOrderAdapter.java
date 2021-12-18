@@ -27,7 +27,6 @@ public class RiwayatOrderAdapter extends RecyclerView.Adapter<RiwayatOrderAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.bindData(lisItem.get(position));
-        // jika ada item
     }
 
     @Override
@@ -42,8 +41,6 @@ public class RiwayatOrderAdapter extends RecyclerView.Adapter<RiwayatOrderAdapte
             super(itemView.getRoot());
 
             binding = itemView;
-
-            // deklarasi variable widget
         }
 
         public void bindData(DataItem dataItem) {
@@ -52,7 +49,6 @@ public class RiwayatOrderAdapter extends RecyclerView.Adapter<RiwayatOrderAdapte
             binding.txtDname1.setText(dataItem.getNameDomain());
             binding.txtTypePaket1.setText(dataItem.getPriceName());
             binding.txtDate.setText(dataItem.getCreatedAt()+"");
-
         }
     }
 }

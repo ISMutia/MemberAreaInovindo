@@ -21,25 +21,22 @@ public class NotificationActivity extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.notification);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.notification:
-                        return true;
-                    case R.id.menu1:
-                        Intent gotohome = new Intent(NotificationActivity.this, MainActivity.class);
-                        startActivity(gotohome);
-                        overridePendingTransition(0,0);
-                        return true;
-                    case R.id.profile:
-                        Intent gotoproofile = new Intent(NotificationActivity.this, ProfileActivity.class);
-                        startActivity(gotoproofile);
-                        overridePendingTransition(0,0);
-                        return true;
-                }
-                return false;
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.notification:
+                    return true;
+                case R.id.menu1:
+                    Intent gotohome = new Intent(NotificationActivity.this, MainActivity.class);
+                    startActivity(gotohome);
+                    overridePendingTransition(0,0);
+                    return true;
+                case R.id.profile:
+                    Intent gotoproofile = new Intent(NotificationActivity.this, ProfileActivity.class);
+                    startActivity(gotoproofile);
+                    overridePendingTransition(0,0);
+                    return true;
             }
+            return false;
         });
     }
 }

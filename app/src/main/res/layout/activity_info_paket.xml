@@ -4,42 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.paket.InfoPaketActivity"
     android:background="@drawable/b6"
-    >
+    tools:context=".ui.paket.InfoPaketActivity">
 
     <TextView
         android:id="@+id/txtInfoPaket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:text="Info Paket"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
         android:textColor="#304062"
-        android:textSize="30sp"/>
+        android:textSize="30sp" />
 
     <RelativeLayout
+        android:id="@+id/R1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/txtInfoPaket"
-        android:layout_marginTop="150dp"
-        android:id="@+id/R1">
+        android:layout_marginTop="150dp">
 
         <ImageView
             android:id="@+id/imgSilver"
             android:layout_width="120dp"
             android:layout_height="100dp"
-            android:src="@drawable/silver"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:src="@drawable/silver" />
 
         <RelativeLayout
+            android:id="@+id/relativeSilver"
             android:layout_width="match_parent"
             android:layout_height="117dp"
-            android:orientation="horizontal"
-            android:padding="35dp"
             android:layout_toRightOf="@id/imgSilver"
-            android:id="@+id/relativeSilver">
+            android:orientation="horizontal"
+            android:padding="35dp">
 
             <TextView
                 android:id="@+id/txtNamaPaket"
@@ -53,18 +52,19 @@
                 android:id="@+id/txtHargaPaket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp.3.500.000"
                 android:layout_below="@+id/txtNamaPaket"
+                android:text="Rp.3.500.000"
                 android:textStyle="bold" />
         </RelativeLayout>
+
         <RelativeLayout
+            android:id="@+id/relativeGold"
             android:layout_width="match_parent"
             android:layout_height="117dp"
-            android:orientation="horizontal"
-            android:padding="35dp"
-            android:layout_toRightOf="@id/imgGold"
             android:layout_marginTop="117dp"
-            android:id="@+id/relativeGold">
+            android:layout_toRightOf="@id/imgGold"
+            android:orientation="horizontal"
+            android:padding="35dp">
 
             <TextView
                 android:id="@+id/txtNamaPaket2"
@@ -78,19 +78,19 @@
                 android:id="@+id/txtHargaPaket2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp.5.000.000"
                 android:layout_below="@+id/txtNamaPaket2"
+                android:text="Rp.5.000.000"
                 android:textStyle="bold" />
         </RelativeLayout>
+
         <RelativeLayout
+            android:id="@+id/relativePlatinum"
             android:layout_width="match_parent"
             android:layout_height="117dp"
-            android:orientation="horizontal"
-            android:padding="35dp"
-            android:layout_toRightOf="@id/imgPlatin"
-            android:id="@+id/relativePlatinum"
             android:layout_marginTop="234dp"
-            >
+            android:layout_toRightOf="@id/imgPlatin"
+            android:orientation="horizontal"
+            android:padding="35dp">
 
             <TextView
                 android:id="@+id/txtNamaPaket3"
@@ -104,8 +104,8 @@
                 android:id="@+id/txtHargaPaket3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp.7.000.000"
                 android:layout_below="@+id/txtNamaPaket3"
+                android:text="Rp.7.000.000"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -113,17 +113,17 @@
             android:id="@+id/imgGold"
             android:layout_width="120dp"
             android:layout_height="100dp"
-            android:src="@drawable/gold"
             android:layout_below="@id/imgSilver"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:src="@drawable/gold" />
 
         <ImageView
             android:id="@+id/imgPlatin"
             android:layout_width="120dp"
             android:layout_height="100dp"
-            android:src="@drawable/platin"
             android:layout_below="@id/imgGold"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:src="@drawable/platin" />
 
 
     </RelativeLayout>

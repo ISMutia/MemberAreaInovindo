@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.progress.ProgressActivity"
     android:background="@drawable/b3"
-    >
+    tools:context=".ui.progress.ProgressActivity">
+
     <TextView
         android:id="@+id/txtprogress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
         android:layout_weight="1"
         android:text="Progress"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="30dp"
         android:textColor="#304062"
-        android:textSize="30sp"/>
+        android:textSize="30sp" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="350dp"
         android:layout_height="match_parent"
-        android:fillViewport="true"
         android:layout_below="@id/txtprogress"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="25dp"
+        android:fillViewport="true"
         android:paddingTop="10dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -35,7 +35,7 @@
             android:nestedScrollingEnabled="false"
             android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/list_progress"/>
+            tools:listitem="@layout/list_progress" />
     </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

@@ -1,15 +1,14 @@
 package com.example.memberareainovindo.ui.order;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.memberareainovindo.Adapter.OrderAdapter;
 import com.example.memberareainovindo.Api.RetroServer;
@@ -45,17 +44,15 @@ public class OrderActivity extends AppCompatActivity {
         initView();
         initOnClick();
     }
+
     private void initView() {
 
     }
 
     private void initOnClick() {
-        binding.fabTambah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent goaddorder = new Intent(OrderActivity.this, AddOrderActivity.class);
-                startActivity(goaddorder);
-            }
+        binding.fabTambah.setOnClickListener(v -> {
+            Intent goaddorder = new Intent(OrderActivity.this, AddOrderActivity.class);
+            startActivity(goaddorder);
         });
     }
 
@@ -65,33 +62,34 @@ public class OrderActivity extends AppCompatActivity {
         RetroServer.getInstance()
                 .orderList(id)
                 .enqueue(new Callback<OrderResponse>() {
-            @Override
-            public void onResponse(Call<OrderResponse> call, Response<OrderResponse> response) {
-                if (response.body().getData()!=null){
-                    initRvOrder(response.body().getData());
-                }
-            }
+                    @Override
+                    public void onResponse(Call<OrderResponse> call, Response<OrderResponse> response) {
+                        if (response.body().getData() != null) {
+                            initRvOrder(response.body().getData());
+                        }
+                    }
 
-            @Override
-            public void onFailure(Call<OrderResponse> call, Throwable t) {
+                    @Override
+                    public void onFailure(Call<OrderResponse> call, Throwable t) {
 
-            }
-        });
+                    }
+                });
     }
 
     private void initRvOrder(List<DataItem> data) {
-        try{
+        try {
             OrderAdapter adapter = new OrderAdapter(data);
             binding.rvlistorder.setAdapter(adapter);
             binding.rvlistorder.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
             binding.rvlistorder.hasFixedSize();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.toolbar_menu,menu);
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
         return true;
     }
 
@@ -99,10 +97,10 @@ public class OrderActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int item_id = item.getItemId();
 
-        if (item_id == R.id.listOrder){
+        if (item_id == R.id.listOrder) {
             Intent gotoorder = new Intent(OrderActivity.this, OrderActivity.class);
             startActivity(gotoorder);
-        }else if (item_id == R.id.riwayatOrder){
+        } else if (item_id == R.id.riwayatOrder) {
             Intent gotoriwayatorder = new Intent(OrderActivity.this, RiwayatOrderActivity.class);
             startActivity(gotoriwayatorder);
         }

@@ -11,20 +11,20 @@
         android:id="@+id/Testimoni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
         android:layout_weight="1"
         android:text="Testimonial"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="30dp"
         android:textColor="#304062"
-        android:textSize="30sp"/>
+        android:textSize="30sp" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="25dp"
         android:fillViewport="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:paddingTop="40dp">
+        android:paddingTop="40dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvlistTestimo"

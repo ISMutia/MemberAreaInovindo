@@ -34,30 +34,25 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.menu1);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.notification:
-                        Intent gotonotif = new Intent(MainActivity.this, NotificationActivity.class);
-                        startActivity(gotonotif);
-                        overridePendingTransition(0,0);
-                        return true;
-                    case R.id.menu1:
-                        return true;
-                    case R.id.profile:
-                        Intent gotoprofile = new Intent(MainActivity.this, ProfileActivity.class);
-                        startActivity(gotoprofile);
-                        overridePendingTransition(0,0);
-                        return true;
-                }
-                return false;
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.notification:
+                    Intent gotonotif = new Intent(MainActivity.this, NotificationActivity.class);
+                    startActivity(gotonotif);
+                    overridePendingTransition(0,0);
+                    return true;
+                case R.id.menu1:
+                    return true;
+                case R.id.profile:
+                    Intent gotoprofile = new Intent(MainActivity.this, ProfileActivity.class);
+                    startActivity(gotoprofile);
+                    overridePendingTransition(0,0);
+                    return true;
             }
+            return false;
         });
 
-
         mSessionManager = new SessionManager(this);
-        //Toast.makeText(this, mSessionManager.getFullname(), Toast.LENGTH_SHORT).show();
 
         initView();
         initOnClick();

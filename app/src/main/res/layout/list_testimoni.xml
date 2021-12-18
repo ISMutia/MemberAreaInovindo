@@ -26,10 +26,10 @@
                 android:id="@+id/txtCusName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
                 android:text="Doni"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginLeft="25dp"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -42,10 +42,10 @@
                 android:id="@+id/txtTestiCus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nice"
-                android:textSize="15sp"
                 android:layout_marginLeft="25dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:text="Nice"
+                android:textSize="15sp" />
         </LinearLayout>
 
     </LinearLayout>

@@ -53,10 +53,10 @@
                     android:id="@+id/eduser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
                     android:text="Anastasia,"
                     android:textSize="18sp"
-                    android:layout_marginTop="35dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -78,9 +78,9 @@
                     android:id="@+id/edBill"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
                     android:text="1"
-                    android:textSize="18sp"
-                    android:paddingLeft="15dp" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -179,8 +179,7 @@
                 android:layout_height="2dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
-                android:background="@color/black">
-            </LinearLayout>
+                android:background="@color/black"></LinearLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCheckOut"
@@ -193,6 +192,7 @@
                 android:textColor="@color/white"
                 app:backgroundTint="#E21313"
                 app:cornerRadius="50dp" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnPayLater"
                 android:layout_width="150dp"

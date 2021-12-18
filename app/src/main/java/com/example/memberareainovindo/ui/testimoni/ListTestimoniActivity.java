@@ -40,12 +40,9 @@ public class ListTestimoniActivity extends AppCompatActivity {
     }
 
     private void initOnClick() {
-        binding.fabTambahTesti.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoaddtesti = new Intent(ListTestimoniActivity.this, AddTestimoniActivity.class);
-                startActivity(gotoaddtesti);
-            }
+        binding.fabTambahTesti.setOnClickListener(v -> {
+            Intent gotoaddtesti = new Intent(ListTestimoniActivity.this, AddTestimoniActivity.class);
+            startActivity(gotoaddtesti);
         });
     }
 
@@ -56,10 +53,9 @@ public class ListTestimoniActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<TestimoniResponse> call, Response<TestimoniResponse> response) {
                         //Toast.makeText(ListTestimoniActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
-                        if(response.body().getData()!=null){
+                        if (response.body().getData() != null) {
                             intRvTesti(response.body().getData());
                         }
-
                     }
 
                     @Override
@@ -75,10 +71,9 @@ public class ListTestimoniActivity extends AppCompatActivity {
             binding.rvlistTestimo.setAdapter(adapter);
             binding.rvlistTestimo.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
             binding.rvlistTestimo.hasFixedSize();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Override

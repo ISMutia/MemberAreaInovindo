@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.order.RiwayatOrderActivity"
-    android:background="@drawable/b3">
+    android:background="@drawable/b3"
+    tools:context=".ui.order.RiwayatOrderActivity">
 
     <TextView
         android:id="@+id/txtRTestimoni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
         android:layout_weight="1"
         android:text="Riwayat Order"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="30dp"
         android:textColor="#304062"
-        android:textSize="30sp"/>
+        android:textSize="30sp" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
         android:layout_below="@id/txtRTestimoni"
+        android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -32,7 +32,6 @@
             android:nestedScrollingEnabled="false"
             android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/list_riwayat_order"/>
+            tools:listitem="@layout/list_riwayat_order" />
     </androidx.core.widget.NestedScrollView>
-
 </RelativeLayout>

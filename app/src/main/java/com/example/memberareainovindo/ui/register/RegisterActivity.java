@@ -30,7 +30,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         initView();
         initOnClick();
-
     }
 
     private void initView() {
@@ -38,19 +37,13 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void initOnClick() {
-        binding.btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnRegisterAction();
-            }
+        binding.btnRegister.setOnClickListener(v -> {
+            btnRegisterAction();
         });
-        binding.mBirt1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus){
-                    binding.mBirt1.clearFocus();
-                    mBirt1Action();
-                }
+        binding.mBirt1.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus){
+                binding.mBirt1.clearFocus();
+                mBirt1Action();
             }
         });
     }
@@ -61,12 +54,9 @@ public class RegisterActivity extends AppCompatActivity {
                 .setTitle("Pilih tanggal")
                 .setSelectedToday(true)
                 .setTimeFormat("yyyy-MM-dd") //pastikan polanya sama
-                .onOkPressedCallBack(new SingleDatePickerDialog.OnOkPressed() {
-                    @Override
-                    public void onOkPressed(String value) {
-                        //Toast.makeText(getApplicationContext(), value, Toast.LENGTH_SHORT).show();
-                        binding.mBirt1.setText(value);
-                    }
+                .onOkPressedCallBack(value -> {
+                    //Toast.makeText(getApplicationContext(), value, Toast.LENGTH_SHORT).show();
+                    binding.mBirt1.setText(value);
                 })
                 .build()
                 .show();

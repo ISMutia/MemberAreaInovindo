@@ -16,7 +16,6 @@ public class SessionManager {
     private String KEY_UPDATED_AT = "updated_at";
     private String KEY_ID_USER = "id";
 
-
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
 

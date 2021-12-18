@@ -34,7 +34,7 @@ public class TestimoniAdapter extends RecyclerView.Adapter<TestimoniAdapter.View
         return lisItem.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         ListTestimoniBinding binding;
 
         public ViewHolder(@NonNull ListTestimoniBinding itemView) {

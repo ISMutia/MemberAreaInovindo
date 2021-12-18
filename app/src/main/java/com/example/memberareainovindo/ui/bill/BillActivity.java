@@ -23,20 +23,14 @@ public class BillActivity extends AppCompatActivity {
     }
 
     private void initOnClick() {
-        binding.btnCheckOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotopay = new Intent(BillActivity.this, PaymentActivity.class);
-                startActivity(gotopay);
-            }
+        binding.btnCheckOut.setOnClickListener(v -> {
+            Intent gotopay = new Intent(BillActivity.this, PaymentActivity.class);
+            startActivity(gotopay);
         });
 
-        binding.btnPayLater.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoriwayat = new Intent(BillActivity.this, RiwayatOrderActivity.class);
-                startActivity(gotoriwayat);
-            }
+        binding.btnPayLater.setOnClickListener(v -> {
+            Intent gotoriwayat = new Intent(BillActivity.this, RiwayatOrderActivity.class);
+            startActivity(gotoriwayat);
         });
     }
 }

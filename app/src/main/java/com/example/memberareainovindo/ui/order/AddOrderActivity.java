@@ -69,7 +69,6 @@ public class AddOrderActivity extends AppCompatActivity {
         } else {
             sendData();
 //            Toast.makeText(this, "Simpan  data", Toast.LENGTH_SHORT).show();
-
         }
     }
 
@@ -97,7 +96,6 @@ public class AddOrderActivity extends AppCompatActivity {
                             Intent gotobill = new Intent(AddOrderActivity.this, BillActivity.class);
                             startActivity(gotobill);
                         }
-
                     }
 
                     @Override
