@@ -62,8 +62,8 @@ public interface ApiService {
     @GET("orderList/{id}")
     Call<OrderResponse> orderList(@Path("id") String id);
 
-    @GET("orderRiwayat")
-    Call<OrderRiwayatResponse> orderRiwayat();
+    @GET("orderRiwayat/{id}")
+    Call<OrderRiwayatResponse> orderRiwayat(@Path("id") String id);
 
     @GET("testimoniList")
     Call<TestimoniResponse> testimoniList();

@@ -54,6 +54,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             binding.txtFWork1.setText(dataItem.getSelesaiP());
             binding.txtFDomain1.setText(dataItem.getLamaDomain());
             binding.txtWa.setText(dataItem.getLinkGroupWa());
+            binding.txtStatus.setText(dataItem.getStatusName());
         }
     }
 }

@@ -9,6 +9,7 @@ import com.example.memberareainovindo.Adapter.RiwayatOrderAdapter;
 import com.example.memberareainovindo.Api.RetroServer;
 import com.example.memberareainovindo.Model.response.riwayatOrder.DataItem;
 import com.example.memberareainovindo.Model.response.riwayatOrder.OrderRiwayatResponse;
+import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityRiwayatOrderBinding;
 
 import java.util.List;
@@ -20,11 +21,16 @@ import retrofit2.Response;
 public class RiwayatOrderActivity extends AppCompatActivity {
     private ActivityRiwayatOrderBinding binding;
 
+    private SessionManager mSessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityRiwayatOrderBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        mSessionManager = new SessionManager(this);
+
 
         initView();
 //        initOnClick();
@@ -39,8 +45,9 @@ public class RiwayatOrderActivity extends AppCompatActivity {
 //    }
 
     private void loadDataRiwayat() {
+        String id = mSessionManager.getId();
         RetroServer.getInstance()
-                .orderRiwayat()
+                .orderRiwayat(id)
                 .enqueue(new Callback<OrderRiwayatResponse>() {
                     @Override
                     public void onResponse(Call<OrderRiwayatResponse> call, Response<OrderRiwayatResponse> response) {

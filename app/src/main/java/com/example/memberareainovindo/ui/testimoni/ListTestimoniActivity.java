@@ -36,7 +36,7 @@ public class ListTestimoniActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        loadDataTestimoni();
+
     }
 
     private void initOnClick() {
@@ -81,5 +81,10 @@ public class ListTestimoniActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
+        loadDataTestimoni();
+    }
 }

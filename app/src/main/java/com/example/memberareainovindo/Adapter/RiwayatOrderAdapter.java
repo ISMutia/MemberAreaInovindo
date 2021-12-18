@@ -41,15 +41,17 @@ public class RiwayatOrderAdapter extends RecyclerView.Adapter<RiwayatOrderAdapte
         public ViewHolder(@NonNull  ListRiwayatOrderBinding itemView) {
             super(itemView.getRoot());
 
+            binding = itemView;
+
             // deklarasi variable widget
         }
 
         public void bindData(DataItem dataItem) {
             binding.txtPNameB.setText(dataItem.getProjectName());
-            binding.txtIdBills.setText(dataItem.getNoBill());
-            binding.txtStatus.setText(dataItem.getStatusName());
+            binding.txtIdBills.setText(dataItem.getNoBill()+"");
+            //binding.txtStatus.setText(dataItem.getStatusName());
             binding.txtTypePaket1.setText(dataItem.getPriceName());
-            //binding.txtDate.setText(dataItem.getCreatedAt()+"");
+            binding.txtDate.setText(dataItem.getCreatedAt()+"");
 
         }
     }

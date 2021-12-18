@@ -2,6 +2,7 @@ package com.example.memberareainovindo.ui.order;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
@@ -34,6 +35,9 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityOrderBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.drList);
+        setSupportActionBar(toolbar);
 
         mSessionManager = new SessionManager(this);
 

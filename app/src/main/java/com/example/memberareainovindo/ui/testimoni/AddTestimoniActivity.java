@@ -1,5 +1,6 @@
 package com.example.memberareainovindo.ui.testimoni;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -11,6 +12,8 @@ import com.example.memberareainovindo.Model.body.TestimoniAddBody;
 import com.example.memberareainovindo.Model.response.testimoniAdd.TestimoniAddResponse;
 import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityAddTestimoniBinding;
+import com.example.memberareainovindo.ui.login.LoginActivity;
+import com.example.memberareainovindo.ui.register.RegisterActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -58,7 +61,7 @@ public class AddTestimoniActivity extends AppCompatActivity {
         String id = mSessionManager.getId();
 
         TestimoniAddBody body = new TestimoniAddBody();
-        body.getIdCustomers(id);
+        body.setIdCustomers(id);
         body.setDescription(binding.edtTestimoni.getText().toString());
 
         RetroServer.getInstance()
@@ -68,6 +71,8 @@ public class AddTestimoniActivity extends AppCompatActivity {
                     public void onResponse(Call<TestimoniAddResponse> call, Response<TestimoniAddResponse> response) {
                         if (response.body().getStatus().equals("success")){
                             Toast.makeText(AddTestimoniActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
+                            Intent intRegister = new Intent(AddTestimoniActivity.this, ListTestimoniActivity.class);
+                            startActivity(intRegister);
                         }
                     }
 

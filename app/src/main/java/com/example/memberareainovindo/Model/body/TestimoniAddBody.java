@@ -10,16 +10,16 @@ public class TestimoniAddBody{
 	@SerializedName("description")
 	private String description;
 
+	public String getIdCustomers(){
+		return idCustomers;
+	}
+
 	public void setIdCustomers(String idCustomers) {
 		this.idCustomers = idCustomers;
 	}
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public String getIdCustomers(String id){
-		return idCustomers;
 	}
 
 	public String getDescription(){

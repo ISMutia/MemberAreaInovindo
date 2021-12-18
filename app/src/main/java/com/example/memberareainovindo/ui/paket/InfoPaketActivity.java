@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,16 +12,16 @@ import com.example.memberareainovindo.R;
 
 public class InfoPaketActivity extends AppCompatActivity {
 
-    LinearLayout silver, gold, platinum;
+    RelativeLayout silver, gold, platinum;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_paket);
-        silver = (LinearLayout) findViewById(R.id.linearSilver);
-        gold = (LinearLayout) findViewById(R.id.linearGold);
-        platinum = (LinearLayout) findViewById(R.id.linearPlatinum);
+        silver = (RelativeLayout) findViewById(R.id.relativeSilver);
+        gold = (RelativeLayout) findViewById(R.id.relativeGold);
+        platinum = (RelativeLayout) findViewById(R.id.relativePlatinum);
         paket1();
         paket2();
         paket3();

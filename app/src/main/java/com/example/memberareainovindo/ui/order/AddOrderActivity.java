@@ -14,6 +14,7 @@ import com.example.memberareainovindo.Model.response.orderForm.FormResponse;
 import com.example.memberareainovindo.Model.response.orderForm.PriceItem;
 import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityAddOrderBinding;
+import com.example.memberareainovindo.ui.bill.BillActivity;
 import com.example.memberareainovindo.ui.paket.InfoPaketActivity;
 import com.gzeinnumer.ad.AdapterAutoCompleteText;
 
@@ -76,15 +77,15 @@ public class AddOrderActivity extends AppCompatActivity {
         String id = mSessionManager.getId();
 
         OrderAddBody body = new OrderAddBody();
-        body.setMulaiP("2021-10-01");
-        body.setSelesaiP("2021-10-01");
-        body.setLamaDomain("2021-10-01");
+        //body.setMulaiP("2021-10-01");
+        //body.setSelesaiP("2021-10-01");
+        //body.setLamaDomain("2021-10-01");
         body.setIdDomain(idDomain + "");
         body.setIdPrice(idPrice + "");
         body.setIdCustomers(id);
         body.setNameDomain(binding.edDomainName.getText().toString());
         body.setProjectName(binding.edtProjectName.getText().toString());
-        body.setLamaP("2 bulan");
+        //body.setLamaP("2 bulan");
 
         RetroServer.getInstance()
                 .orderAdd(body)
@@ -93,6 +94,8 @@ public class AddOrderActivity extends AppCompatActivity {
                     public void onResponse(Call<OrderAddResponse> call, Response<OrderAddResponse> response) {
                         if (response.body().getStatus().equals("success")) {
                             Toast.makeText(AddOrderActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
+                            Intent gotobill = new Intent(AddOrderActivity.this, BillActivity.class);
+                            startActivity(gotobill);
                         }
 
                     }
@@ -148,6 +151,7 @@ public class AddOrderActivity extends AppCompatActivity {
                             openDialogPrice();
                             openDialogDomain();
                             Toast.makeText(AddOrderActivity.this, "data loaded", Toast.LENGTH_SHORT).show();
+                            
                         }
                     }
 

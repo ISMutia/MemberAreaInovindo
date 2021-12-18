@@ -40,17 +40,6 @@
                 android:paddingLeft="15dp"
                 />
 
-            <TextView
-                android:id="@+id/txtStatus"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="75dp"
-                android:background="#3AB057"
-                android:text="Active"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -102,7 +91,31 @@
                 android:textSize="20sp"
                 android:paddingLeft="15dp"
                 />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/txtDname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Domain name :"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtDname1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smartquran.com"
+                android:textSize="20sp"
+                android:paddingLeft="15dp"
+                />
         </LinearLayout>
 
         <LinearLayout
