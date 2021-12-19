@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "124600766208",
+    "project_id": "mutia-f9582",
+    "storage_bucket": "mutia-f9582.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124600766208:android:19fceb72a0ed8dfb5a2de5",
+        "android_client_info": {
+          "package_name": "com.example.memberareainovindo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124600766208-kn852j49gp890feqsfmbtfhb187ge9n1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU5Smjr0fMySmF8pnhgKdTm_UOsuJ6COg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124600766208-kn852j49gp890feqsfmbtfhb187ge9n1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

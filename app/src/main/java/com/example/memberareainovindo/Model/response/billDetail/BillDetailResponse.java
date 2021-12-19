@@ -1,9 +1,9 @@
-package com.example.memberareainovindo.Model.response.bills;
+package com.example.memberareainovindo.Model.response.billDetail;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class BillResponse{
+public class BillDetailResponse{
 
 	@SerializedName("data")
 	private List<DataItem> data;
@@ -17,5 +17,13 @@ public class BillResponse{
 
 	public String getStatus(){
 		return status;
+	}
+
+	@Override
+	public String toString() {
+		return "BillDetailResponse{" +
+				"data=" + data +
+				", status='" + status + '\'' +
+				'}';
 	}
 }

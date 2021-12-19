@@ -9,6 +9,7 @@ public class SessionManager {
     private String KEY_DATE_BIRTH = "date_birth";
     private String KEY_EMAIL = "email";
     private String KEY_GAMBAR = "gambar";
+    private String KEY_GAMBAR_URL = "gambar_url";
     private String KEY_STATUS = "status";
     private String KEY_CONTACT_WA = "contact_wa";
     private String KEY_ADDRESS = "address";
@@ -107,5 +108,14 @@ public class SessionManager {
 
     public String getId() {
         return mSharedPreferences.getString(KEY_ID_USER, null);
+    }
+
+    public void setGambarUrl(String gambar_url) {
+        mEditor = mSharedPreferences.edit();
+        mEditor.putString(KEY_GAMBAR_URL, gambar_url).apply();
+    }
+
+    public String getGambarUrl() {
+        return mSharedPreferences.getString(KEY_GAMBAR_URL, null);
     }
 }

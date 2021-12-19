@@ -3,8 +3,10 @@ package com.example.memberareainovindo.ui.dashboard;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +20,10 @@ import com.example.memberareainovindo.ui.login.LoginActivity;
 import com.example.memberareainovindo.ui.order.OrderActivity;
 import com.example.memberareainovindo.ui.progress.ProgressActivity;
 import com.example.memberareainovindo.ui.testimoni.ListTestimoniActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -29,6 +34,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w( "Token FCM","Fetching FCM registration token failed", task.getException());
+                            return;
+                        }
+
+                        // Get new FCM registration token
+                        String token = task.getResult();
+                        // Log and toast
+                        Toast.makeText(MainActivity.this, token.toString(), Toast.LENGTH_SHORT).show();
+
+                        Log.w( "Token FCM", token.toString());
+                    }
+                });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.buttom_navigation);
 
@@ -59,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        binding.textFulllname.setText(mSessionManager.getFullname());
+
     }
 
     private void initOnClick() {
@@ -109,5 +132,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    protected void onResume() {
 
+        super.onResume();
+
+        binding.textFulllname.setText(mSessionManager.getFullname());
+    }
 }

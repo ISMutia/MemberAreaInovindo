@@ -2,25 +2,35 @@ package com.example.memberareainovindo.Api;
 
 import com.example.memberareainovindo.Model.body.LoginBody;
 import com.example.memberareainovindo.Model.body.OrderAddBody;
+import com.example.memberareainovindo.Model.body.ProfileBody;
 import com.example.memberareainovindo.Model.body.RegisterBody;
 import com.example.memberareainovindo.Model.body.TestimoniAddBody;
-import com.example.memberareainovindo.Model.response.bills.BillResponse;
+import com.example.memberareainovindo.Model.response.billDetail.BillDetailResponse;
 import com.example.memberareainovindo.Model.response.login.LoginResponse;
 import com.example.memberareainovindo.Model.response.order.OrderResponse;
 import com.example.memberareainovindo.Model.response.orderAdd.OrderAddResponse;
 import com.example.memberareainovindo.Model.response.orderForm.FormResponse;
+import com.example.memberareainovindo.Model.response.payment.PaymentResponse;
+import com.example.memberareainovindo.Model.response.profile.ProfileResponse;
 import com.example.memberareainovindo.Model.response.progress.ProgressResponse;
 import com.example.memberareainovindo.Model.response.register.RegisterResponse;
 import com.example.memberareainovindo.Model.response.riwayatOrder.OrderRiwayatResponse;
 import com.example.memberareainovindo.Model.response.testimoni.TestimoniResponse;
 import com.example.memberareainovindo.Model.response.testimoniAdd.TestimoniAddResponse;
+import com.example.memberareainovindo.Model.response.userProfile.ResponseProfile;
 
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Part;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -65,14 +75,11 @@ public interface ApiService {
     @GET("orderRiwayat/{id}")
     Call<OrderRiwayatResponse> orderRiwayat(@Path("id") String id);
 
+    @GET("billDetail/{id}")
+    Call<BillDetailResponse> billDetail(@Path("id") int id);
+
     @GET("testimoniList")
     Call<TestimoniResponse> testimoniList();
-
-    @GET("billList")
-    Call<BillResponse> billList();
-
-    @GET("billList")
-    Call<BillResponse> riwayatBills();
 
     @GET("progressList/{id}")
     Call<ProgressResponse> progressList(@Path("id") String id);
@@ -86,4 +93,14 @@ public interface ApiService {
     @POST("orderAdd")
     Call<OrderAddResponse> orderAdd(@Body OrderAddBody body);
 
+    @PUT("userUpdate/{id}")
+    Call<ProfileResponse> userUpdate(@Body ProfileBody body, @Path("id") String id);
+
+    @Multipart
+    @POST("userUpdatePhoto/{id}")
+    Call<ResponseProfile> userUpdatePhoto(@Part MultipartBody.Part gambar, @Path("id")String id);
+
+    @Multipart
+    @POST("uploadPayment/{id}")
+    Call<PaymentResponse> uploadPayment(@Part MultipartBody.Part bukti, @Path("id")String id);
 }

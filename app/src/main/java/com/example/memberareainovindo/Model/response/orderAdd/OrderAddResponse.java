@@ -6,10 +6,13 @@ import com.google.gson.annotations.SerializedName;
 public class OrderAddResponse{
 
 	@SerializedName("data")
-	private List<DataItem> data;
+	private DataItem data;
 
 	@SerializedName("id")
 	private int id;
+
+	@SerializedName("id_bill")
+	private int id_bill;
 
 	@SerializedName("message")
 	private String message;
@@ -17,12 +20,16 @@ public class OrderAddResponse{
 	@SerializedName("status")
 	private String status;
 
-	public List<DataItem> getData(){
+	public DataItem getData(){
 		return data;
 	}
 
 	public int getId(){
 		return id;
+	}
+
+	public int getId_bill() {
+		return id_bill;
 	}
 
 	public String getMessage(){

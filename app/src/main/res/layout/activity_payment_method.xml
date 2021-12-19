@@ -18,6 +18,17 @@
         android:textColor="#304062"
         android:textSize="30sp"/>
 
+    <TextView
+        android:id="@+id/txtbillno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_weight="1"
+        android:text="No Bill"
+        android:textColor="#304062"
+        android:textSize="20sp"
+        android:layout_below="@id/txtPayment"/>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvBills"
         android:layout_width="350dp"
@@ -29,16 +40,15 @@
         app:cardBackgroundColor="#EAEEF7"
         app:cardCornerRadius="15dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnCheckOut"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="95dp"
-            android:layout_marginTop="450dp"
-            android:text="Upload"
-            android:textColor="@color/white"
-            app:backgroundTint="#E21313"
-            app:cornerRadius="50dp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView"
+            android:src="@drawable/receipt"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            />
+
 
     </androidx.cardview.widget.CardView>
 

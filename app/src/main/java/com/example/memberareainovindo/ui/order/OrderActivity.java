@@ -1,6 +1,7 @@
 package com.example.memberareainovindo.ui.order;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -66,6 +67,7 @@ public class OrderActivity extends AppCompatActivity {
                     public void onResponse(Call<OrderResponse> call, Response<OrderResponse> response) {
                         if (response.body().getData() != null) {
                             initRvOrder(response.body().getData());
+
                         }
                     }
 
@@ -82,6 +84,17 @@ public class OrderActivity extends AppCompatActivity {
             binding.rvlistorder.setAdapter(adapter);
             binding.rvlistorder.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
             binding.rvlistorder.hasFixedSize();
+            adapter.setOnClickListener(new OrderAdapter.OnClickListener() {
+                @Override
+                public void onClick(int position, DataItem data) {
+                    Intent intentWhatsapp = new Intent(Intent.ACTION_VIEW);
+//                    String url = "https://chat.whatsapp.com/<group_link>";
+                    String url = data.getLinkGroupWa();
+                    intentWhatsapp.setData(Uri.parse(url));
+                    intentWhatsapp.setPackage("com.whatsapp");
+                    startActivity(intentWhatsapp);
+                }
+            });
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -34,6 +34,18 @@ public class Data{
 	@SerializedName("contact_wa")
 	private String contactWa;
 
+	@SerializedName("gambar_url")
+	private String gambar_url;
+
+	public String getGambar_url() {
+		return gambar_url;
+	}
+
+	public void setGambar_url(String gambar_url) {
+		this.gambar_url = gambar_url;
+	}
+
+
 	public String getDateBirth(){
 		return dateBirth;
 	}

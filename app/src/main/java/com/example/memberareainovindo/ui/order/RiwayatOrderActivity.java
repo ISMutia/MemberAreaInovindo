@@ -1,5 +1,6 @@
 package com.example.memberareainovindo.ui.order;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import com.example.memberareainovindo.Model.response.riwayatOrder.DataItem;
 import com.example.memberareainovindo.Model.response.riwayatOrder.OrderRiwayatResponse;
 import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityRiwayatOrderBinding;
+import com.example.memberareainovindo.ui.bill.BillActivity;
+import com.example.memberareainovindo.ui.paket.InfoPaketActivity;
 
 import java.util.List;
 
@@ -63,6 +66,14 @@ public class RiwayatOrderActivity extends AppCompatActivity {
             binding.rvlistRiwayatOrder.setAdapter(adapter);
             binding.rvlistRiwayatOrder.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
             binding.rvlistRiwayatOrder.hasFixedSize();
+            adapter.setOnClickListener(new RiwayatOrderAdapter.OnClickListener() {
+                @Override
+                public void onClick(int position, DataItem data) {
+                    Intent gotobill = new Intent(getApplicationContext(), BillActivity.class);
+                    gotobill.putExtra("id",data.getNoBill());
+                    startActivity(gotobill);
+                }
+            });
         } catch (Exception e) {
             e.printStackTrace();
         }

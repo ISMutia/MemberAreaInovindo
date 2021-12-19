@@ -2,6 +2,7 @@ package com.example.memberareainovindo.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,10 +54,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void initOnClick() {
-        binding.lupaPassword.setOnClickListener(v -> {
-            Intent int2 = new Intent(LoginActivity.this, ForgotPassword.class);
-            startActivity(int2);
-        });
+//        binding.lupaPassword.setOnClickListener(v -> {
+//            Intent int2 = new Intent(LoginActivity.this, ForgotPassword.class);
+//            startActivity(int2);
+//        });
         binding.signup.setOnClickListener(v -> {
             Intent int1 = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(int1);
@@ -91,7 +92,12 @@ public class LoginActivity extends AppCompatActivity {
                         if (response.body().getStatus().equals("success")) {
                             mSessionManager.setFullname(response.body().getData().getFullname());
                             mSessionManager.setId(response.body().getData().getId() + "");
-
+                            mSessionManager.setDatebirth(response.body().getData().getDateBirth());
+                            mSessionManager.setEmail(response.body().getData().getEmail());
+                            mSessionManager.setContactWa(response.body().getData().getContactWa());
+                            mSessionManager.setAddress(response.body().getData().getAddress());
+                            mSessionManager.setGambarUrl(response.body().getData().getGambar_url());
+                            Log.d("gambar_url", "onResponse: "+response.body().getData().getGambar_url());
                             Intent int3 = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(int3);
                         } else {

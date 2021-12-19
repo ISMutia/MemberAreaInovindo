@@ -76,21 +76,21 @@
         app:backgroundTint="#20A8E3"
         app:cornerRadius="50dp" />
 
-    <TextView
-        android:id="@+id/lupa_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnLogin"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="15dp"
-        android:text="Forgot your password ?"
-        android:textColor="#354D7B" />
+<!--    <TextView-->
+<!--        android:id="@+id/lupa_password"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/btnLogin"-->
+<!--        android:layout_marginLeft="60dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Forgot your password ?"-->
+<!--        android:textColor="#354D7B" />-->
 
     <TextView
         android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lupa_password"
+        android:layout_below="@+id/btnLogin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="170dp"
         android:text="@string/sign_up"

@@ -1,6 +1,7 @@
 package com.example.memberareainovindo.Adapter;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,16 @@ import java.util.List;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> {
     final List<DataItem> listItem;
+
+    private OnClickListener onClickListener;
+
+    public void setOnClickListener(OrderAdapter.OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
+    }
+
+    public interface OnClickListener{
+        void onClick(int position, DataItem data);
+    }
 
     public OrderAdapter(List<DataItem> listItem) {
         this.listItem = listItem;
@@ -27,7 +38,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.bindData(listItem.get(position));
+        holder.bindData(listItem.get(position), onClickListener);
     }
 
     @Override
@@ -43,7 +54,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             binding = itemView;
         }
 
-        public void bindData(DataItem dataItem) {
+        public void bindData(DataItem dataItem, OnClickListener onClickListener) {
             binding.txtIdOrder.setText(dataItem.getId()+"");
             binding.txtPName1.setText(dataItem.getProjectName());
             binding.txtLama1.setText(dataItem.getLamaP());
@@ -54,6 +65,14 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             binding.txtFDomain1.setText(dataItem.getLamaDomain());
             binding.txtWa.setText(dataItem.getLinkGroupWa());
             binding.txtStatus.setText(dataItem.getStatusName());
+            if (onClickListener != null){
+                binding.txtWa.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onClickListener.onClick(getAdapterPosition(),dataItem);
+                    }
+                });
+            }
         }
     }
 }

@@ -93,7 +93,8 @@ public class AddOrderActivity extends AppCompatActivity {
                     public void onResponse(Call<OrderAddResponse> call, Response<OrderAddResponse> response) {
                         if (response.body().getStatus().equals("success")) {
 //                            Toast.makeText(AddOrderActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
-                            Intent gotobill = new Intent(AddOrderActivity.this, BillActivity.class);
+                            Intent gotobill = new Intent(getApplicationContext(), BillActivity.class);
+                            gotobill.putExtra("id",response.body().getId_bill());
                             startActivity(gotobill);
                         }
                     }
