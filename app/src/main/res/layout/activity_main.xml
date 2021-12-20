@@ -70,6 +70,16 @@
                 android:layout_marginLeft="30dp"
                 android:layout_below="@id/text4"/>
 
+            <EditText
+                android:id="@+id/token_fcm"
+                android:text="test"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@id/text5"/>
+
 
         </RelativeLayout>
 

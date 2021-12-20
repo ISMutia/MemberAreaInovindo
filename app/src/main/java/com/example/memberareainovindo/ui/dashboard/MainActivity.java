@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
                         String token = task.getResult();
                         // Log and toast
                         Toast.makeText(MainActivity.this, token.toString(), Toast.LENGTH_SHORT).show();
-
                         Log.w( "Token FCM", token.toString());
+                        binding.tokenFcm.setText(token.toString());
                     }
                 });
 

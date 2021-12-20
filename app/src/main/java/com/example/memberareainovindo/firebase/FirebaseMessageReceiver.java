@@ -47,6 +47,10 @@ public class FirebaseMessageReceiver
                     remoteMessage.getNotification().getTitle(),
                     remoteMessage.getNotification().getBody());
             Log.w("Ada pesan",remoteMessage.getNotification().getTitle());
+
+            String click_action = remoteMessage.getNotification().getClickAction();
+
+            Intent customerRebate = new Intent(click_action);
         }
     }
 
