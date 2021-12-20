@@ -4,14 +4,16 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.memberareainovindo.NotificationActivity;
+import com.example.memberareainovindo.Api.RetroServer;
+import com.example.memberareainovindo.Model.body.FCMUpdateBody;
+import com.example.memberareainovindo.Model.response.FCMUpdateResponse;
+import com.example.memberareainovindo.ui.notification.NotificationActivity;
 import com.example.memberareainovindo.ProfileActivity;
 import com.example.memberareainovindo.R;
 import com.example.memberareainovindo.data.SessionManager;
@@ -25,9 +27,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private SessionManager mSessionManager;
+
+    private static final String TAG = "afsafgafsagag";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<String> task) {
                         if (!task.isSuccessful()) {
-                            Log.w( "Token FCM","Fetching FCM registration token failed", task.getException());
+                            Log.w("Token FCM", "Fetching FCM registration token failed", task.getException());
                             return;
                         }
 
@@ -48,8 +56,33 @@ public class MainActivity extends AppCompatActivity {
                         String token = task.getResult();
                         // Log and toast
                         Toast.makeText(MainActivity.this, token.toString(), Toast.LENGTH_SHORT).show();
-                        Log.w( "Token FCM", token.toString());
+                        Log.w("Token FCM", token.toString());
                         binding.tokenFcm.setText(token.toString());
+                        Log.d(TAG, "onComplete: " + token);
+                        //lakukan proses peng updated data disini
+
+                        FCMUpdateBody body = new FCMUpdateBody();
+                        body.setTokenFcm(token);
+                        RetroServer
+                                .getInstance()
+                                .fcmUpdate(mSessionManager.getId(), body)
+                                .enqueue(new Callback<FCMUpdateResponse>() {
+                                    @Override
+                                    public void onResponse(Call<FCMUpdateResponse> call, Response<FCMUpdateResponse> response) {
+                                        try {
+                                            if (response.body().getStatus().equals("success")) {
+                                                Toast.makeText(getApplicationContext(), "token di update", Toast.LENGTH_SHORT).show();
+                                            }
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call<FCMUpdateResponse> call, Throwable t) {
+                                        Toast.makeText(getApplicationContext(), "not success update token", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
                     }
                 });
 
@@ -58,18 +91,18 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.menu1);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
-            switch (item.getItemId()){
+            switch (item.getItemId()) {
                 case R.id.notification:
                     Intent gotonotif = new Intent(MainActivity.this, NotificationActivity.class);
                     startActivity(gotonotif);
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.menu1:
                     return true;
                 case R.id.profile:
                     Intent gotoprofile = new Intent(MainActivity.this, ProfileActivity.class);
                     startActivity(gotoprofile);
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
             }
             return false;
@@ -126,7 +159,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    public void clickUrl(String url){
+
+    public void clickUrl(String url) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);

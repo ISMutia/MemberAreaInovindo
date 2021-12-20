@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/b3"
-    tools:context=".NotificationActivity">
+    tools:context=".ui.notification.NotificationActivity">
 
     <TextView
         android:id="@+id/txtNotif"
@@ -35,6 +35,7 @@
             android:nestedScrollingEnabled="false"
             android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
             tools:listitem="@layout/list_notification" />
     </androidx.core.widget.NestedScrollView>
 

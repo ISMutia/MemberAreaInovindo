@@ -1,47 +1,31 @@
 package com.example.memberareainovindo;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.loader.content.CursorLoader;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.Instrumentation;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapShader;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Shader;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.memberareainovindo.Api.RetroServer;
 import com.example.memberareainovindo.Model.body.ProfileBody;
-import com.example.memberareainovindo.Model.response.login.LoginResponse;
 import com.example.memberareainovindo.Model.response.profile.ProfileResponse;
 import com.example.memberareainovindo.Model.response.userProfile.ResponseProfile;
 import com.example.memberareainovindo.data.SessionManager;
 import com.example.memberareainovindo.databinding.ActivityProfileBinding;
-import com.example.memberareainovindo.ui.bill.BillActivity;
 import com.example.memberareainovindo.ui.dashboard.MainActivity;
 import com.example.memberareainovindo.ui.login.LoginActivity;
+import com.example.memberareainovindo.ui.notification.NotificationActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 

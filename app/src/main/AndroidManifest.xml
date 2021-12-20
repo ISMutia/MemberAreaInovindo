@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MemberAreaInovindo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".NotificationActivity">
+        <activity android:name=".ui.notification.NotificationActivity">
             <intent-filter>
                 <action android:name="OPEN_ACTIVITY_1" />
                 <category android:name="android.intent.category.DEFAULT" />

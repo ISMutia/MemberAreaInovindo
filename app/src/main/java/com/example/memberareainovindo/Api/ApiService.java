@@ -1,12 +1,15 @@
 package com.example.memberareainovindo.Api;
 
+import com.example.memberareainovindo.Model.body.FCMUpdateBody;
 import com.example.memberareainovindo.Model.body.LoginBody;
 import com.example.memberareainovindo.Model.body.OrderAddBody;
 import com.example.memberareainovindo.Model.body.ProfileBody;
 import com.example.memberareainovindo.Model.body.RegisterBody;
 import com.example.memberareainovindo.Model.body.TestimoniAddBody;
+import com.example.memberareainovindo.Model.response.FCMUpdateResponse;
 import com.example.memberareainovindo.Model.response.billDetail.BillDetailResponse;
 import com.example.memberareainovindo.Model.response.login.LoginResponse;
+import com.example.memberareainovindo.Model.response.notification.NotificationResponse;
 import com.example.memberareainovindo.Model.response.order.OrderResponse;
 import com.example.memberareainovindo.Model.response.orderAdd.OrderAddResponse;
 import com.example.memberareainovindo.Model.response.orderForm.FormResponse;
@@ -20,13 +23,11 @@ import com.example.memberareainovindo.Model.response.testimoniAdd.TestimoniAddRe
 import com.example.memberareainovindo.Model.response.userProfile.ResponseProfile;
 
 import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -103,4 +104,10 @@ public interface ApiService {
     @Multipart
     @POST("uploadPayment/{id}")
     Call<PaymentResponse> uploadPayment(@Part MultipartBody.Part bukti, @Path("id")String id);
+
+    @POST("fcmUpdate/{id}")
+    Call<FCMUpdateResponse> fcmUpdate(@Path("id") String id,@Body FCMUpdateBody body);
+
+    @GET("notification/{id}")
+    Call<NotificationResponse> notificationList(@Path("id") String id);
 }
