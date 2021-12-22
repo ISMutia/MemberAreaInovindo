@@ -34,12 +34,20 @@
                 android:textSize="20sp" />
 
         </LinearLayout>
+        <TextView
+            android:id="@+id/txtpresen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:text="0%"
+            android:textColor="#304062"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="10dp">
+            android:orientation="horizontal">
 
             <ProgressBar
                 android:id="@+id/simpleProgressBar"
@@ -48,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:max="100"
-                android:padding="15dp"
+                android:padding="5dp"
                 android:progress="80" />
 
             <ImageView
@@ -56,7 +64,8 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="100dp"
-                android:src="@drawable/progres1" />
+                android:src="@drawable/progres1"
+                android:paddingBottom="5dp"/>
 
         </LinearLayout>
 

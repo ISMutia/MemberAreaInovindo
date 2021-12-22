@@ -67,6 +67,7 @@ public class AddTestimoniActivity extends AppCompatActivity {
                         if (response.body().getStatus().equals("success")){
 //                            Toast.makeText(AddTestimoniActivity.this, "data sukses disimpan", Toast.LENGTH_SHORT).show();
                             Intent intRegister = new Intent(AddTestimoniActivity.this, ListTestimoniActivity.class);
+                            //finishAffinity();
                             startActivity(intRegister);
                         }
                     }

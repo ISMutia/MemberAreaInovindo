@@ -46,6 +46,14 @@ public class RegisterActivity extends AppCompatActivity {
                 mBirt1Action();
             }
         });
+        binding.signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intRegister = new Intent(RegisterActivity.this, LoginActivity.class);
+                finishAffinity();
+                startActivity(intRegister);
+            }
+        });
     }
 
     private void mBirt1Action() {
@@ -96,12 +104,12 @@ public class RegisterActivity extends AppCompatActivity {
                 .enqueue(new Callback<RegisterResponse>() {
                     @Override
                     public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-                        Toast.makeText(RegisterActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(RegisterActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
                         if (response.body().getStatus().equals("success")) {
                             Intent intRegister = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(intRegister);
                         } else {
-                            Toast.makeText(RegisterActivity.this, "Data Wrong!!", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(RegisterActivity.this, "Data Wrong!!", Toast.LENGTH_SHORT).show();
                         }
 
                     }

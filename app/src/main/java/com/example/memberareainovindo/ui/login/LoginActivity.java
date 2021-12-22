@@ -46,10 +46,11 @@ public class LoginActivity extends AppCompatActivity {
 //        binding.mPassword.setText("12345678");
         if (mSessionManager.getFullname() != null) {
             Intent int3 = new Intent(LoginActivity.this, MainActivity.class);
+
             startActivity(int3);
-            return;
+
         } else {
-            Toast.makeText(this, "Anda belum login nichh!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Login!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -99,6 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                             mSessionManager.setGambarUrl(response.body().getData().getGambar_url());
                             Log.d("gambar_url", "onResponse: "+response.body().getData().getGambar_url());
                             Intent int3 = new Intent(LoginActivity.this, MainActivity.class);
+                            finishAffinity();
                             startActivity(int3);
                         } else {
                             Toast.makeText(LoginActivity.this, "Email or Password wrong!", Toast.LENGTH_SHORT).show();

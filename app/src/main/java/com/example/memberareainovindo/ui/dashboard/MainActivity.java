@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
                         // Get new FCM registration token
                         String token = task.getResult();
                         // Log and toast
-                        Toast.makeText(MainActivity.this, token.toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, token.toString(), Toast.LENGTH_SHORT).show();
                         Log.w("Token FCM", token.toString());
-                        binding.tokenFcm.setText(token.toString());
+                        //binding.tokenFcm.setText(token.toString());
                         Log.d(TAG, "onComplete: " + token);
                         //lakukan proses peng updated data disini
 
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                                     public void onResponse(Call<FCMUpdateResponse> call, Response<FCMUpdateResponse> response) {
                                         try {
                                             if (response.body().getStatus().equals("success")) {
-                                                Toast.makeText(getApplicationContext(), "token di update", Toast.LENGTH_SHORT).show();
+                                                //Toast.makeText(getApplicationContext(), "token di update", Toast.LENGTH_SHORT).show();
                                             }
                                         } catch (Exception e) {
                                             e.printStackTrace();
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     @Override
                                     public void onFailure(Call<FCMUpdateResponse> call, Throwable t) {
-                                        Toast.makeText(getApplicationContext(), "not success update token", Toast.LENGTH_SHORT).show();
+                                        //Toast.makeText(getApplicationContext(), "not success update token", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                     }

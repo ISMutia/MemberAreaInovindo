@@ -164,12 +164,22 @@
                     android:textStyle="normal" />
 
                 <TextView
+                    android:id="@+id/txtPrice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Rp."
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+                <TextView
                     android:id="@+id/txtPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="110dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="30dp"
-                    android:text="Rp.1.500.000"
+                    android:text="1.500.000"
                     android:textSize="20sp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -187,7 +197,7 @@
                 android:layout_height="50dp"
                 android:layout_below="@id/linear2"
                 android:layout_marginLeft="175dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="30dp"
                 android:text="Check Out"
                 android:textColor="@color/white"
                 app:backgroundTint="#E21313"
@@ -203,8 +213,47 @@
                 android:textColor="@color/white"
                 app:backgroundTint="#FF6200EE"
                 app:cornerRadius="50dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <TextView
+                android:id="@+id/textRek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For payment can be transfer to this account:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="12dp"/>
+                <TextView
+                    android:id="@+id/textDetail1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BCA 7750855541"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="12dp"
+                    android:layout_below="@id/textRek"/>
+                <TextView
+                    android:id="@+id/textDetail2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="an. N0vi Setia Nurviat"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="12dp"
+                    android:layout_below="@id/textDetail1"/>
 
+            </RelativeLayout>
+
+        </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

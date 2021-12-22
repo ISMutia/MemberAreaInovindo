@@ -26,6 +26,7 @@ import com.example.memberareainovindo.ProfileActivity;
 import com.example.memberareainovindo.R;
 import com.example.memberareainovindo.databinding.ActivityOrderBinding;
 import com.example.memberareainovindo.databinding.ActivityPaymentMethodBinding;
+import com.example.memberareainovindo.ui.order.RiwayatOrderActivity;
 
 import java.io.File;
 
@@ -88,6 +89,9 @@ public class PaymentActivity extends AppCompatActivity {
                         if (response.body().getStatus().equals("success")) {
 
                             Toast.makeText(PaymentActivity.this, "bukti berhasil di upload", Toast.LENGTH_SHORT).show();
+                            Intent intenttoRiwayat = new Intent(PaymentActivity.this, RiwayatOrderActivity.class);
+                            //finishAffinity();
+                            startActivity(intenttoRiwayat);
                         } else {
                             Toast.makeText(PaymentActivity.this, "gagal", Toast.LENGTH_SHORT).show();
                         }

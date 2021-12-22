@@ -17,6 +17,9 @@ import com.example.memberareainovindo.databinding.ActivityBillBinding;
 import com.example.memberareainovindo.ui.order.AddOrderActivity;
 import com.example.memberareainovindo.ui.order.RiwayatOrderActivity;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -81,8 +84,10 @@ public class BillActivity extends AppCompatActivity {
 
                     if (response.body().getData().get(0).getBukti() == null){
                         binding.btnCheckOut.setVisibility(View.VISIBLE);
+                        binding.btnPayLater.setVisibility(View.VISIBLE);
                     }else {
                         binding.btnCheckOut.setVisibility(View.INVISIBLE);
+                        binding.btnPayLater.setVisibility(View.INVISIBLE);
                     }
 
                 }
