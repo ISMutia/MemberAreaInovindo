@@ -35,7 +35,7 @@ public class DataItem{
 	private String projectName;
 
 	@SerializedName("total_bayar")
-	private int totalBayar;
+	private String totalBayar;
 
 	@SerializedName("name_domain")
 	private String nameDomain;
@@ -80,7 +80,7 @@ public class DataItem{
 		return projectName;
 	}
 
-	public int getTotalBayar(){
+	public String getTotalBayar(){
 		return totalBayar;
 	}
 

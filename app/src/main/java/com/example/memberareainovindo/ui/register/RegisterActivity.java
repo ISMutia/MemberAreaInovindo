@@ -2,6 +2,7 @@ package com.example.memberareainovindo.ui.register;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -105,18 +106,19 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
                         //Toast.makeText(RegisterActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
+                        Log.d("respon", response.body().toString());
                         if (response.body().getStatus().equals("success")) {
                             Intent intRegister = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(intRegister);
                         } else {
-                            //Toast.makeText(RegisterActivity.this, "Data Wrong!!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Email already exists", Toast.LENGTH_SHORT).show();
                         }
 
                     }
 
                     @Override
                     public void onFailure(Call<RegisterResponse> call, Throwable t) {
-                        Toast.makeText(RegisterActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this, "Email already exists", Toast.LENGTH_LONG).show();
                     }
                 });
     }

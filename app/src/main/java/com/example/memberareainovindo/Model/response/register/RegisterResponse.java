@@ -13,6 +13,9 @@ public class RegisterResponse{
 	@SerializedName("status")
 	private String status;
 
+	@SerializedName("errors")
+	private String errors;
+
 	public Object getData(){
 		return data;
 	}
@@ -25,12 +28,17 @@ public class RegisterResponse{
 		return status;
 	}
 
+	public String getErrors(){
+		return errors;
+	}
+
 	@Override
 	public String toString() {
 		return "RegisterResponse{" +
 				"data=" + data +
 				", message='" + message + '\'' +
 				", status='" + status + '\'' +
+				", errors='" + errors + '\'' +
 				'}';
 	}
 }

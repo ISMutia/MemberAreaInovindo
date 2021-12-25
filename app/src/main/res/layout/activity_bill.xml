@@ -245,7 +245,7 @@
                     android:id="@+id/textDetail2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="an. N0vi Setia Nurviat"
+                    android:text="an. Novi Setia Nurviat"
                     android:textSize="18sp"
                     android:textColor="@color/black"
                     android:layout_marginLeft="12dp"

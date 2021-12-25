@@ -80,7 +80,7 @@ public class BillActivity extends AppCompatActivity {
                     binding.edType.setText(response.body().getData().get(0).getPriceName());
                     binding.edPname.setText(response.body().getData().get(0).getProjectName());
                     binding.txtDname1.setText(response.body().getData().get(0).getNameDomain());
-                    binding.txtPrice.setText(response.body().getData().get(0).getTotalBayar()+"");
+                    binding.txtPrice.setText(response.body().getData().get(0).getTotalBayar());
 
                     if (response.body().getData().get(0).getBukti() == null){
                         binding.btnCheckOut.setVisibility(View.VISIBLE);

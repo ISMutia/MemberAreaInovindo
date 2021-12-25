@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
+    <base-config cleartextTrafficPermitted="true" />l
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">192.168.115.32</domain>
-        <domain includeSubdomains="true">192.168.43.15</domain>
-        <domain includeSubdomains="true">192.168.1.41</domain>
-        <domain includeSubdomains="true">192.168.9.32</domain>
+        <domain includeSubdomains="true">http://member-area.inovindoacademy.com/api/</domain>
     </domain-config>
 </network-security-config>
